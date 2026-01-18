@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Backup Parts</title>
+  <meta name="description" content="Industrial O-rings, sealing components, and custom rubber parts. Material options and fast quotation support." />
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
+      --brand:#0b3a66; --brand2:#0f5ea8; --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius2:26px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.12), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 60px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:12px 14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+      border-radius:999px;box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand img{
+      width:44px;height:44px;object-fit:contain;border-radius:12px;background:#fff;
+      border:1px solid var(--line);padding:6px;
+    }
+    .brand .name{font-weight:800}
+    .brand .tag{font-size:12px;color:var(--muted);margin-top:2px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;color:#374151;font-weight:700;font-size:14px}
+    .nav a{padding:8px 10px;border-radius:999px}
+    .nav a:hover{background:rgba(15,94,168,.08)}
+    .cta{display:flex;gap:10px;align-items:center;justify-content:flex-end;min-width:220px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.85);padding:9px 12px;border-radius:999px;font-size:13px;color:#374151}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border:none;
+      padding:10px 14px;border-radius:999px;font-weight:800;font-size:13px;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);cursor:pointer
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .hero{
+      margin-top:18px;background:rgba(255,255,255,.75);border:1px solid var(--line);
+      border-radius:var(--radius2);box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden;
+    }
+    .hero:before{
+      content:"";position:absolute;inset:-80px -120px auto auto;width:360px;height:360px;
+      background:radial-gradient(circle at 30% 30%, rgba(15,94,168,.18), transparent 60%);
+      transform:rotate(18deg);pointer-events:none;
+    }
+    h1{margin:0 0 10px;font-size:38px;letter-spacing:-.02em}
+    .sub{margin:0;color:#374151;line-height:1.7;max-width:75ch}
+    .grid{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}.brand,.cta{min-width:auto}}
+    .card{
+      background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:var(--radius2);
+      box-shadow:var(--shadow);padding:18px;
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+    .two{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:920px){.two{grid-template-columns:1fr}}
+    .muted{color:var(--muted)}
+    label{display:block;font-size:12px;color:#374151;font-weight:800;margin:12px 0 6px}
+    input, textarea{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+      outline:none;font-size:14px;background:#fff;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
+    .footer{margin-top:18px;padding:14px 6px 0;color:var(--muted);font-size:12px;text-align:center}
+    ul{margin:10px 0 0;padding-left:18px}
+    li{margin:6px 0;font-size:13px;color:#374151}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="Backup Parts Logo">
+        <div>
+          <div class="name">Backup Parts</div>
+          <div class="tag">Custom O-Rings & Sealing Components</div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" style="background:rgba(15,94,168,.10);">Products</a>
+        <a href="about.html">About</a>
+        <a href="#quote">Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>Products</h1>
+      <p class="sub">
+        We supply standard and custom O-rings and sealing components for industrial maintenance and OEM needs.
+        Share your specifications for a tailored quotation.
+      </p>
+
+      <div class="grid" style="margin-top:16px;">
+        <div class="card">
+          <h3>Standard O-Rings</h3>
+          <p>Metric and inch sizes for common industrial applications. Stable supply for repeat procurement.</p>
+          <ul>
+            <li>NBR / EPDM / FKM options</li>
+            <li>Common hardness ranges supported</li>
+            <li>Labeling & packing support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Custom O-Rings</h3>
+          <p>Non-standard sizes and special requirements supported. Send drawings, samples, or key dimensions.</p>
+          <ul>
+            <li>ID × CS (or OD × ID × CS)</li>
+            <li>Tolerance & compound requirements</li>
+            <li>Application-based material guidance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Sealing Components</h3>
+          <p>Support for sealing-related rubber components used in machinery, hydraulics, and maintenance.</p>
+          <ul>
+            <li>Sealing kits / replacement sets</li>
+            <li>Custom rubber parts on request</li>
+            <li>Export-friendly packaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="two" style="margin-top:12px;">
+      <div class="card" id="materials">
+        <h3>Material quick guide</h3>
+        <p class="muted">Selection depends on medium, temperature, and environment.</p>
+        <ul>
+          <li><b>NBR</b> — oil resistance, general industrial use.</li>
+          <li><b>FKM</b> — high temperature, fuels, many chemicals.</li>
+          <li><b>EPDM</b> — water, steam, weather resistance.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>What to send for a fast quote</h3>
+        <ul>
+          <li>Size: ID × CS (or OD × ID × CS)</li>
+          <li>Quantity & target delivery date</li>
+          <li>Material preference (or application medium)</li>
+          <li>Temperature range and environment</li>
+          <li>Any drawings / photos / standards</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two" id="quote" style="margin-top:12px;">
+      <div class="card">
+        <h3>Request a Quote</h3>
+        <p class="muted">This form opens your email client with details pre-filled.</p>
+
+        <form action="mailto:info@backup-parts.com" method="post" enctype="text/plain">
+          <label>Your Name</label>
+          <input name="Name" placeholder="Your name / company" />
+
+          <label>Email</label>
+          <input name="Email" placeholder="your@email.com" />
+
+          <label>Requirements</label>
+          <textarea name="Requirements" placeholder="Size (ID x CS), quantity, material, temperature, medium, delivery date..."></textarea>
+
+          <div style="margin-top:14px;">
+            <button class="btn" type="submit">Send Inquiry</button>
+            <div class="hint">Or email us directly at <b>info@backup-parts.com</b>.</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Contact</h3>
+        <p><b>Email:</b> info@backup-parts.com</p>
+        <p><b>Scope:</b> O-rings • sealing components • custom rubber parts</p>
+        <p><b>Service:</b> quotation • material guidance • export packaging</p>
+        <p class="muted" style="margin-top:10px;">
+          If you have an application problem, include medium/temperature/pressure and we’ll recommend a suitable material.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Backup Parts. All rights reserved.</div>
+  </div>
+</body>
+</html>
