@@ -3,63 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Backup Parts – Custom O-Rings & Sealing Solutions</title>
-  <meta name="description" content="Backup Parts is a global supplier and manufacturer of standard and custom O-rings, sealing components, and rubber parts. We support industrial maintenance, OEM manufacturing, and distribution with export-ready service." />
+  <title>About | Backup Parts</title>
+  <meta name="description" content="Backup Parts is a B2B supplier of standard and custom O-rings and sealing components. Material guidance, fast quotation, export-ready support." />
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;background:#f6f7fb;color:#111827;margin:0;padding:20px;}
-    .wrap{max-width:900px;margin:0 auto;}
-    h1,h2{color:#0b3a66;}
-    p{line-height:1.6;color:#374151;}
-    ul{margin-left:18px;}
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
+      --brand:#0b3a66; --brand2:#0f5ea8; --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius2:26px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.12), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 60px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:12px 14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+      border-radius:999px;box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand img{
+      width:44px;height:44px;object-fit:contain;border-radius:12px;background:#fff;
+      border:1px solid var(--line);padding:6px;
+    }
+    .brand .name{font-weight:800}
+    .brand .tag{font-size:12px;color:var(--muted);margin-top:2px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;color:#374151;font-weight:700;font-size:14px}
+    .nav a{padding:8px 10px;border-radius:999px}
+    .nav a:hover{background:rgba(15,94,168,.08)}
+    .cta{display:flex;gap:10px;align-items:center;justify-content:flex-end;min-width:220px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.85);padding:9px 12px;border-radius:999px;font-size:13px;color:#374151}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border:none;
+      padding:10px 14px;border-radius:999px;font-weight:800;font-size:13px;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);cursor:pointer
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .hero{
+      margin-top:18px;background:rgba(255,255,255,.75);border:1px solid var(--line);
+      border-radius:var(--radius2);box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden;
+    }
+    .hero:before{
+      content:"";position:absolute;inset:-80px -120px auto auto;width:360px;height:360px;
+      background:radial-gradient(circle at 30% 30%, rgba(15,94,168,.18), transparent 60%);
+      transform:rotate(18deg);pointer-events:none;
+    }
+    h1{margin:0 0 10px;font-size:38px;letter-spacing:-.02em}
+    .sub{margin:0;color:#374151;line-height:1.7;max-width:70ch}
+    .grid{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}.brand,.cta{min-width:auto}}
+    .card{
+      background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:var(--radius2);
+      box-shadow:var(--shadow);padding:18px;
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+    .two{margin-top:12px;display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+    @media (max-width:920px){.two{grid-template-columns:1fr}}
+    .card ul{margin:10px 0 0;padding-left:18px;color:#374151}
+    .card li{margin:6px 0;font-size:13px}
+    .footer{margin-top:18px;padding:14px 6px 0;color:var(--muted);font-size:12px;text-align:center}
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>About Backup Parts</h1>
-    <p>
-      Backup Parts is a global supplier and manufacturer specializing in standard and custom O-rings,
-      sealing components, and industrial rubber parts. With experience in both production and export service,
-      we support maintenance teams, OEM manufacturers, distributors, e-commerce sellers, and international buyers.
-    </p>
+    <div class="topbar">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="Backup Parts Logo">
+        <div>
+          <div class="name">Backup Parts</div>
+          <div class="tag">Custom O-Rings & Sealing Components</div>
+        </div>
+      </div>
 
-    <h2>Our Identity</h2>
-    <p>
-      We combine factory-level capabilities with export-ready services and documentation.
-      This means we understand technical specifications, material requirements, and global supply needs,
-      and can support customers from inquiry to delivery with clarity and reliability.
-    </p>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html" style="background:rgba(15,94,168,.10);">About</a>
+      </div>
 
-    <h2>What We Provide</h2>
-    <ul>
-      <li><b>Manufacturing & Supply:</b> Standard and custom O-rings in metric and inch sizes.</li>
-      <li><b>Technical Support:</b> Material selection, tolerance guidance, and application consultation.</li>
-      <li><b>Export Services:</b> Export-ready packing, documentation, and compliance support.</li>
-      <li><b>Stable Supply:</b> Repeat procurement support and supply chain reliability.</li>
-    </ul>
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="products.html#quote">Get Quote</a>
+      </div>
+    </div>
 
-    <h2>Our Customers</h2>
-    <p>
-      Backup Parts serves a broad range of customers including:
-    </p>
-    <ul>
-      <li>Industrial maintenance and repair teams</li>
-      <li>OEM equipment manufacturers</li>
-      <li>Spare parts distributors</li>
-      <li>E-commerce and aftermarket sellers</li>
-      <li>Global procurement teams</li>
-    </ul>
+    <div class="hero">
+      <h1>About Backup Parts</h1>
+      <p class="sub">
+        Backup Parts is a B2B supplier of standard and custom O-rings and sealing components.
+        We support industrial buyers with fast quotation, material guidance, and export-ready packaging.
+      </p>
 
-    <h2>Why Choose Us</h2>
-    <p>
-      We understand sealing requirements start from application context — medium, temperature, and environment.
-      That’s why we focus on communication and understanding first, before quoting or supplying.
-    </p>
+      <div class="grid">
+        <div class="card">
+          <h3>What we supply</h3>
+          <p>O-rings, sealing components, and custom rubber parts for maintenance replacement and OEM requirements.</p>
+        </div>
+        <div class="card">
+          <h3>How we work</h3>
+          <p>Send your size, quantity, application medium, and temperature range—we recommend materials and quote efficiently.</p>
+        </div>
+        <div class="card">
+          <h3>For global buyers</h3>
+          <p>Clear communication, labeling support, and export-friendly documentation and packing.</p>
+        </div>
+      </div>
+    </div>
 
-    <p><b>Contact us</b> anytime at <a href="mailto:info@backup-parts.com">info@backup-parts.com</a> for inquiries or support.</p>
+    <div class="two">
+      <div class="card">
+        <h3>Our focus</h3>
+        <p class="muted">We prioritize stable supply and practical engineering support for procurement teams.</p>
+        <ul>
+          <li><b>Material selection</b>: NBR / FKM / EPDM options based on oil, fuel, water, steam, and temperature.</li>
+          <li><b>Custom sizes</b>: Metric / inch, tolerances, drawings and samples supported.</li>
+          <li><b>Quality & packing</b>: sorting, labeling, and batch consistency guidance for repeat orders.</li>
+          <li><b>Response time</b>: typical quotation in 24–48 hours when specifications are clear.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Contact</h3>
+        <p><b>Email:</b> info@backup-parts.com</p>
+        <p><b>Business:</b> O-rings • Sealing components • Custom rubber parts</p>
+        <p><b>Service:</b> Quotation • Material guidance • Export packaging</p>
+        <p class="muted" style="margin-top:10px;">
+          Tip: For a fast quote, include size (ID×CS), quantity, medium, temperature range, and delivery target.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Backup Parts. All rights reserved.</div>
   </div>
 </body>
 </html>
 
-  </div>
-</body>
-</html>
