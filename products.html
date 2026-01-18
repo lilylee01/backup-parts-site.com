@@ -7,42 +7,11 @@
   <meta name="description" content="Industrial O-rings, sealing components, and custom rubber parts. Material options and fast quotation support." />
   <style>
     :root{
-      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
+      --bg:#f6f7fb; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
       --brand:#0b3a66; --brand2:#0f5ea8; --shadow:0 10px 30px rgba(17,24,39,.08);
       --radius2:26px; --max:1100px;
     }
     *{box-sizing:border-box}
-    .pimg{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:18px;
-  border:1px solid var(--line);
-  display:block;
-  margin-bottom:10px;
-  background:#fff;
-}
-    .heroMedia{
-  margin-top: 14px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  background: #fff;
-}
-.heroMedia img{
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-@media (max-width: 920px){
-  .heroMedia img{ height: 200px; }
-}
-    <div class="hero">
-    <div class="heroMedia">
-  <img src="assets/images/hero.jpg" alt="Industrial sealing and O-rings">
-</div>
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
@@ -69,6 +38,7 @@
     .nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;color:#374151;font-weight:700;font-size:14px}
     .nav a{padding:8px 10px;border-radius:999px}
     .nav a:hover{background:rgba(15,94,168,.08)}
+    .nav .active{background:rgba(15,94,168,.10)}
     .cta{display:flex;gap:10px;align-items:center;justify-content:flex-end;min-width:220px}
     .pill{border:1px solid var(--line);background:rgba(255,255,255,.85);padding:9px 12px;border-radius:999px;font-size:13px;color:#374151}
     .btn{
@@ -88,113 +58,23 @@
     }
     h1{margin:0 0 10px;font-size:38px;letter-spacing:-.02em}
     .sub{margin:0;color:#374151;line-height:1.7;max-width:75ch}
-    .grid{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    @media (max-width:920px){.grid{grid-template-columns:1fr}.brand,.cta{min-width:auto}}
+    .two{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:920px){
+      .two{grid-template-columns:1fr}
+      .brand,.cta{min-width:auto}
+    }
     .card{
       background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:var(--radius2);
       box-shadow:var(--shadow);padding:18px;
     }
     .card h3{margin:0 0 8px;font-size:16px}
- <div class="hero">
-  <h1>Products</h1>
-  <p class="sub">
-    We supply standard and custom O-rings and sealing components for industrial maintenance and OEM requirements.
-    Our focus is stable supply, clear specifications, and efficient quotation.
-  </p>
-</div>
-
-<div class="two" style="margin-top:16px;">
-  <div class="card">
-    <h3>Product Scope</h3>
-    <ul>
-      <li><b>Standard O-rings</b> — metric and inch sizes</li>
-      <li><b>Custom O-rings</b> — non-standard sizes, special tolerances</li>
-      <li><b>Sealing components</b> — sealing kits, rubber parts, OEM replacements</li>
-      <li><b>Materials</b> — NBR, FKM, EPDM (others on request)</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Typical Applications</h3>
-    <ul>
-      <li>Hydraulic systems</li>
-      <li>Pumps and valves</li>
-      <li>Automotive maintenance</li>
-      <li>Industrial machinery</li>
-      <li>Fluid and gas sealing</li>
-    </ul>
-  </div>
-</div>
-
-<div class="two" style="margin-top:12px;">
-  <div class="card">
-    <h3>Material Quick Guide</h3>
-    <table style="width:100%; border-collapse:collapse; font-size:13px;">
-      <tr>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;"><b>NBR</b></td>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;">Oil resistant, general industrial use</td>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;">-30°C ~ +100°C</td>
-      </tr>
-      <tr>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;"><b>FKM</b></td>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;">High temperature, fuel, chemicals</td>
-        <td style="padding:8px; border-bottom:1px solid #e5e7eb;">-20°C ~ +200°C</td>
-      </tr>
-      <tr>
-        <td style="padding:8px;"><b>EPDM</b></td>
-        <td style="padding:8px;">Water, steam, weather resistant</td>
-        <td style="padding:8px;">-40°C ~ +120°C</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="card">
-    <h3>Commercial Information</h3>
-    <ul>
-      <li><b>MOQ:</b> Depends on size & material</li>
-      <li><b>Lead time:</b> Standard 3–10 days; Custom 2–4 weeks</li>
-      <li><b>Packaging:</b> Labeled bags / boxes, export packing supported</li>
-      <li><b>Documents:</b> Packing list, invoice, material info</li>
-    </ul>
-  </div>
-</div>
-
-<div class="two" id="quote" style="margin-top:12px;">
-  <div class="card">
-    <h3>How to Get a Fast Quote</h3>
-    <ul>
-      <li>Size: ID × CS (or OD × ID × CS)</li>
-      <li>Quantity</li>
-      <li>Material or application medium</li>
-      <li>Temperature range</li>
-      <li>Target delivery date</li>
-      <li>Drawings or photos (if available)</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Contact</h3>
-    <p><b>Email:</b> info@backup-parts.com</p>
-    <p><b>Business:</b> O-rings • Sealing components • Custom rubber parts</p>
-    <p><b>Service:</b> Quotation • Material guidance • Export support</p>
-  </div>
-</div>
-
-
     .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
-    .two{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:920px){.two{grid-template-columns:1fr}}
-    .muted{color:var(--muted)}
-    label{display:block;font-size:12px;color:#374151;font-weight:800;margin:12px 0 6px}
-    input, textarea{
-      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
-      outline:none;font-size:14px;background:#fff;
-    }
-    textarea{min-height:120px;resize:vertical}
-    .hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
-    .footer{margin-top:18px;padding:14px 6px 0;color:var(--muted);font-size:12px;text-align:center}
     ul{margin:10px 0 0;padding-left:18px}
     li{margin:6px 0;font-size:13px;color:#374151}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+    .footer{margin-top:18px;padding:14px 6px 0;color:var(--muted);font-size:12px;text-align:center}
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
@@ -210,109 +90,105 @@
 
       <div class="nav">
         <a href="index.html">Home</a>
-        <a href="products.html" style="background:rgba(15,94,168,.10);">Products</a>
+        <a class="active" href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="#quote">Quote</a>
       </div>
 
       <div class="cta">
-        <div class="pill">Email: <b>info@backup-parts.com</b></div>
-        <a class="btn" href="#quote">Get Quote</a>
+        <div class="pill">Email: <a href="mailto:info@backup-parts.com"><b>info@backup-parts.com</b></a></div>
+        <a class="btn" href="#quote">Send RFQ</a>
       </div>
     </div>
 
     <div class="hero">
       <h1>Products</h1>
       <p class="sub">
-        We supply standard and custom O-rings and sealing components for industrial maintenance and OEM needs.
-        Share your specifications for a tailored quotation.
+        We supply standard and custom O-rings and sealing components for industrial maintenance and OEM requirements.
+        Our focus is stable supply, clear specifications, and efficient quotation.
       </p>
-
-      <div class="grid" style="margin-top:16px;">
-        <div class="card">
-          <h3>Standard O-Rings</h3>
-          <p>Metric and inch sizes for common industrial applications. Stable supply for repeat procurement.</p>
-          <ul>
-            <li>NBR / EPDM / FKM options</li>
-            <li>Common hardness ranges supported</li>
-            <li>Labeling & packing support</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Custom O-Rings</h3>
-          <p>Non-standard sizes and special requirements supported. Send drawings, samples, or key dimensions.</p>
-          <ul>
-            <li>ID × CS (or OD × ID × CS)</li>
-            <li>Tolerance & compound requirements</li>
-            <li>Application-based material guidance</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Sealing Components</h3>
-          <p>Support for sealing-related rubber components used in machinery, hydraulics, and maintenance.</p>
-          <ul>
-            <li>Sealing kits / replacement sets</li>
-            <li>Custom rubber parts on request</li>
-            <li>Export-friendly packaging</li>
-          </ul>
-        </div>
-      </div>
     </div>
 
-    <div class="two" style="margin-top:12px;">
-      <div class="card" id="materials">
-        <h3>Material quick guide</h3>
-        <p class="muted">Selection depends on medium, temperature, and environment.</p>
+    <div class="two" style="margin-top:16px;">
+      <div class="card">
+        <h3>Product Scope</h3>
         <ul>
-          <li><b>NBR</b> — oil resistance, general industrial use.</li>
-          <li><b>FKM</b> — high temperature, fuels, many chemicals.</li>
-          <li><b>EPDM</b> — water, steam, weather resistance.</li>
+          <li><b>Standard O-rings</b> — metric and inch sizes</li>
+          <li><b>Custom O-rings</b> — non-standard sizes, special tolerances</li>
+          <li><b>Sealing components</b> — sealing kits, rubber parts, OEM replacements</li>
+          <li><b>Materials</b> — NBR, FKM, EPDM (others on request)</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>What to send for a fast quote</h3>
+        <h3>Typical Applications</h3>
+        <ul>
+          <li>Hydraulic systems</li>
+          <li>Pumps and valves</li>
+          <li>Automotive maintenance</li>
+          <li>Industrial machinery</li>
+          <li>Fluid and gas sealing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="card">
+        <h3>Material Quick Guide</h3>
+        <p class="muted">Selection depends on medium, temperature, and environment.</p>
+        <table>
+          <tr>
+            <td><b>NBR</b></td>
+            <td>Oil resistance, general industrial use</td>
+            <td>-30°C ~ +100°C</td>
+          </tr>
+          <tr>
+            <td><b>FKM</b></td>
+            <td>High temperature, fuel, many chemicals</td>
+            <td>-20°C ~ +200°C</td>
+          </tr>
+          <tr>
+            <td style="border-bottom:none;"><b>EPDM</b></td>
+            <td style="border-bottom:none;">Water, steam, weather resistance</td>
+            <td style="border-bottom:none;">-40°C ~ +120°C</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Commercial Information</h3>
+        <ul>
+          <li><b>MOQ:</b> Depends on size & material</li>
+          <li><b>Lead time:</b> Standard 3–10 days; Custom 2–4 weeks</li>
+          <li><b>Packaging:</b> Labeled bags / boxes, export packing supported</li>
+          <li><b>Documents:</b> Packing list, invoice, material info (on request)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two" id="quote">
+      <div class="card">
+        <h3>How to Get a Fast Quote</h3>
         <ul>
           <li>Size: ID × CS (or OD × ID × CS)</li>
-          <li>Quantity & target delivery date</li>
-          <li>Material preference (or application medium)</li>
+          <li>Quantity</li>
+          <li>Material preference or application medium</li>
           <li>Temperature range and environment</li>
-          <li>Any drawings / photos / standards</li>
+          <li>Target delivery date</li>
+          <li>Drawings or photos (if available)</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="two" id="quote" style="margin-top:12px;">
-      <div class="card">
-        <h3>Request a Quote</h3>
-        <p class="muted">This form opens your email client with details pre-filled.</p>
-
-        <form action="mailto:info@backup-parts.com" method="post" enctype="text/plain">
-          <label>Your Name</label>
-          <input name="Name" placeholder="Your name / company" />
-
-          <label>Email</label>
-          <input name="Email" placeholder="your@email.com" />
-
-          <label>Requirements</label>
-          <textarea name="Requirements" placeholder="Size (ID x CS), quantity, material, temperature, medium, delivery date..."></textarea>
-
-          <div style="margin-top:14px;">
-            <button class="btn" type="submit">Send Inquiry</button>
-            <div class="hint">Or email us directly at <b>info@backup-parts.com</b>.</div>
-          </div>
-        </form>
+        <p class="muted" style="margin-top:10px;">
+          Tip: If you share the medium (oil/water/steam/fuel) + temperature range, we can recommend a suitable compound faster.
+        </p>
       </div>
 
       <div class="card">
         <h3>Contact</h3>
-        <p><b>Email:</b> info@backup-parts.com</p>
-        <p><b>Scope:</b> O-rings • sealing components • custom rubber parts</p>
-        <p><b>Service:</b> quotation • material guidance • export packaging</p>
+        <p><b>Email:</b> <a href="mailto:info@backup-parts.com">info@backup-parts.com</a></p>
+        <p><b>Business:</b> O-rings • Sealing components • Custom rubber parts</p>
+        <p><b>Service:</b> Quotation • Material guidance • Export support</p>
         <p class="muted" style="margin-top:10px;">
-          If you have an application problem, include medium/temperature/pressure and we’ll recommend a suitable material.
+          If you have an application problem, include medium / temperature / pressure and we’ll suggest a material option.
         </p>
       </div>
     </div>
@@ -321,3 +197,4 @@
   </div>
 </body>
 </html>
+
