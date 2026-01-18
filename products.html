@@ -12,6 +12,23 @@
       --radius2:26px; --max:1100px;
     }
     *{box-sizing:border-box}
+    .heroMedia{
+  margin-top: 14px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+.heroMedia img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 920px){
+  .heroMedia img{ height: 200px; }
+}
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
