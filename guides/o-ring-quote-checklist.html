@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>O-Ring Quote Checklist: What to Send for Fast, Accurate Pricing | Backup Parts</title>
+  <meta name="description" content="A practical O-ring RFQ checklist (ID/OD/CS, material, medium, temperature, quantity, tolerances, groove, and packaging). Reduce back-and-forth and get a quote in 24–48 hours." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-quote-checklist.html" />
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --radius: 18px; --radius2: 26px; --max: 980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px;}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); backdrop-filter: blur(10px);
+      border-radius:999px; box-shadow: 0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width: 220px;}
+    .brand img{width:40px; height:40px; object-fit:contain; border-radius:12px; background:#fff; border:1px solid var(--line); padding:6px;}
+    .brand b{display:block;}
+    .brand small{display:block; color:var(--muted); margin-top:2px;}
+    .nav{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:14px; color:#374151;}
+    .nav a{color:inherit; padding:8px 10px; border-radius:999px;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width: 220px;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:9px 12px; border-radius:999px; font-size:13px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 14px;
+      border-radius:999px; font-weight:800; font-size:13px;
+      box-shadow: 0 10px 24px rgba(15,94,168,.22);
+      cursor:pointer; display:inline-block;
+    }
+    .btn:hover{transform: translateY(-1px); text-decoration:none;}
+    header{
+      margin-top:18px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding:22px;
+      position:relative;
+      overflow:hidden;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-80px -120px auto auto;
+      width:320px; height:320px;
+      background: radial-gradient(circle at 30% 30%, rgba(15,94,168,.16), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:12px; font-weight:900; letter-spacing:.14em;
+      color:var(--brand2);
+      background:rgba(15,94,168,.10);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.15);
+      text-transform:uppercase;
+    }
+    h1{margin:12px 0 10px; font-size:34px; line-height:1.15; letter-spacing:-.02em;}
+    .lead{margin:0; color:#374151; line-height:1.7; max-width: 70ch;}
+    .meta{margin-top:10px; color:var(--muted); font-size:13px;}
+    main{margin-top:14px; display:grid; grid-template-columns: 1.2fr .8fr; gap:12px; align-items:start;}
+    @media (max-width: 920px){ main{grid-template-columns:1fr;} .cta,.brand{min-width:auto;} }
+    .card{
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    h2{margin:0 0 10px; font-size:20px;}
+    h3{margin:16px 0 8px; font-size:16px;}
+    p{margin:0 0 10px; color:#374151; line-height:1.75;}
+    ul{margin:8px 0 12px; padding-left:18px; color:#374151;}
+    li{margin:6px 0; line-height:1.6;}
+    .muted{color:var(--muted);}
+    .callout{
+      border:1px solid rgba(15,94,168,.22);
+      background:rgba(15,94,168,.06);
+      padding:12px 12px;
+      border-radius: 16px;
+      margin:12px 0;
+      color:#1f2937;
+    }
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+    @media (max-width: 720px){ .grid2{grid-template-columns:1fr;} }
+    .miniRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .chip{font-size:12px; font-weight:800; background:#fff; border:1px solid var(--line); padding:8px 10px; border-radius:999px; color:#374151;}
+    .toc a{display:block; padding:7px 10px; border-radius:12px; border:1px solid var(--line); background:#fff; margin:8px 0; color:#111827; font-weight:800;}
+    .toc a:hover{background:rgba(11,58,102,.06); text-decoration:none;}
+    .asideHead{display:flex; justify-content:space-between; align-items:center; gap:10px;}
+    .badge{
+      font-size:12px; font-weight:900; color:#065f46;
+      background:rgba(16,185,129,.12);
+      border:1px solid rgba(16,185,129,.18);
+      padding:7px 10px; border-radius:999px;
+      white-space:nowrap;
+    }
+    .quoteBox{
+      border:1px solid var(--line);
+      border-radius: 18px;
+      background:#fff;
+      padding:14px;
+      margin-top:10px;
+    }
+    label{display:block; font-size:12px; color:#374151; font-weight:900; margin:12px 0 6px;}
+    input, textarea{
+      width:100%; padding:12px 12px; border-radius:14px;
+      border:1px solid var(--line); outline:none; font-size:14px; background:#fff;
+    }
+    textarea{min-height:110px; resize:vertical;}
+    .hint{font-size:12px; color:var(--muted); margin-top:8px; line-height:1.5;}
+    footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+    code{background:#fff; border:1px solid var(--line); padding:2px 6px; border-radius:8px;}
+  </style>
+
+  <!-- Optional: FAQ schema (helps AI / search engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What information do I need for an O-ring quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At minimum: size (ID x CS or OD x ID x CS), material, medium, temperature, quantity, and any tolerance or application notes. Drawings/photos and groove details speed up selection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ID x CS or OD x ID x CS—which is better?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Either works. If you can provide ID and CS, that’s often enough. If you have OD and ID, include CS if possible. The most important thing is consistency and units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can I get a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For clear specifications, most standard and custom O-ring RFQs can be quoted in 24–48 hours."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo">
+        <div>
+          <b>Backup Parts</b>
+          <small>Custom O-Rings & Sealing Components</small>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <header>
+      <div class="kicker">RFQ Checklist</div>
+      <h1>O-Ring Quote Checklist: What to Send for Fast, Accurate Pricing</h1>
+      <p class="lead">
+        Most quoting delays come from missing specs. This guide shows exactly what to send—so you get the right material,
+        the correct size, and a quote faster (often within <b>24–48 hours</b> when specs are clear).
+      </p>
+      <div class="meta">Updated: 2026 • Reading time: ~6 minutes</div>
+    </header>
+
+    <main>
+      <!-- MAIN CONTENT -->
+      <article class="card">
+        <h2 id="summary">The 60-second summary</h2>
+        <p>
+          If you only send one message, include:
+          <b>size (ID × CS)</b>, <b>material</b> (or medium + temperature), <b>quantity</b>, and any <b>tolerance</b>.
+          Add photos/drawings if it’s custom or non-standard.
+        </p>
+
+        <div class="callout">
+          <b>Pro tip:</b> If you don’t know the material, tell us the <b>medium</b> (oil/fuel/water/steam/chemicals) and the
+          <b>temperature range</b>. We can recommend NBR / FKM / EPDM / silicone options quickly.
+        </div>
+
+        <h2 id="sizes">1) Size & units (avoid the #1 mistake)</h2>
+        <p>
+          Always specify the unit (<b>mm</b> or <b>inch</b>). For O-rings, we usually quote based on:
+          <code>ID × CS</code> (Inside Diameter × Cross Section). If you have a drawing, attach it.
+        </p>
+        <ul>
+          <li><b>Preferred:</b> ID × CS (e.g., 25.0 mm × 3.0 mm)</li>
+          <li><b>Also ok:</b> OD × ID × CS (if available)</li>
+          <li><b>If you only know OD:</b> send OD and a photo with a ruler/caliper reading</li>
+        </ul>
+
+        <h2 id="material">2) Material selection (what actually matters)</h2>
+        <p>
+          Material is not just “rubber.” The correct compound depends on medium, temperature, pressure, and movement.
+          If you know the material, say it. If not, send conditions.
+        </p>
+
+        <div class="grid2">
+          <div class="callout" style="margin:0;">
+            <b>NBR (Nitrile)</b><br/>
+            <span class="muted">Common for oils & hydraulic fluids; good value.</span>
+          </div>
+          <div class="callout" style="margin:0;">
+            <b>FKM (Viton®)</b><br/>
+            <span class="muted">Higher temperature and fuels/chemicals; premium choice.</span>
+          </div>
+          <div class="callout" style="margin:0;">
+            <b>EPDM</b><br/>
+            <span class="muted">Water/steam applications; not for petroleum oils.</span>
+          </div>
+          <div class="callout" style="margin:0;">
+            <b>Silicone / HNBR / others</b><br/>
+            <span class="muted">Special temperature or dynamic requirements.</span>
+          </div>
+        </div>
+
+        <h3>Send these 4 conditions if you’re unsure:</h3>
+        <ul>
+          <li><b>Medium:</b> oil / fuel / water / steam / gas / chemical name</li>
+          <li><b>Temperature range:</b> min–max (°C/°F)</li>
+          <li><b>Pressure:</b> working and peak (bar/psi)</li>
+          <li><b>Motion:</b> static seal or dynamic (reciprocating/rotating)</li>
+        </ul>
+
+        <h2 id="quantity">3) Quantity & delivery timeline</h2>
+        <p>
+          Pricing changes significantly between prototypes, small batches, and repeat procurement.
+          Tell us your target quantity and whether you expect repeat orders.
+        </p>
+        <ul>
+          <li><b>Sample / prototype:</b> 10–50 pcs</li>
+          <li><b>Small batch:</b> 100–1,000 pcs</li>
+          <li><b>Production:</b> 5,000+ pcs or scheduled releases</li>
+          <li><b>Needed-by date:</b> helps us propose the best production route</li>
+        </ul>
+
+        <h2 id="tolerance">4) Tolerances & fit (where problems happen)</h2>
+        <p>
+          If your seal leaks or is too tight, tolerance is usually the reason. If you have a drawing, share it.
+          Otherwise, tell us what matters: tight fit, easy assembly, or leak-proof at pressure.
+        </p>
+        <ul>
+          <li><b>Standard tolerance</b> is fine for most maintenance parts</li>
+          <li><b>Tight tolerance</b> is recommended for critical assemblies or high pressure</li>
+          <li><b>Groove info</b> (if available): groove diameter, width, depth, surface finish</li>
+        </ul>
+
+        <h2 id="packing">5) Packaging & labeling (saves you time later)</h2>
+        <p>
+          If you manage multiple sizes/materials, packaging details prevent mix-ups.
+          We support <b>sorting, labeling, and export-ready packing</b> for repeat procurement.
+        </p>
+        <ul>
+          <li><b>Pack size:</b> 50/100/200 pcs per bag or box</li>
+          <li><b>Label fields:</b> size, material, hardness, batch/lot, PO number</li>
+          <li><b>Mixed kits:</b> service kits / maintenance kits by size list</li>
+        </ul>
+
+        <h2 id="rfq-template">Copy-paste RFQ template</h2>
+        <p class="muted">Use this message to get a fast quote:</p>
+        <div class="callout" style="white-space:pre-wrap;">
+Product: O-ring
+Size: (ID x CS) _______ (mm/inch)
+Material: _______ (or Medium + Temperature)
+Medium: _______ (oil/fuel/water/steam/chemical)
+Temperature: _______ (min–max)
+Pressure: _______ (working/peak)
+Motion: Static / Dynamic (describe)
+Quantity: _______ pcs (prototype / batch / repeat)
+Tolerance: Standard / Tight (or attach drawing)
+Packaging: _______ (label fields, pack size, kits if any)
+Destination country: _______
+Attachments: photo/drawing (if available)
+        </div>
+
+        <h2 id="cta">Need help confirming the spec?</h2>
+        <p>
+          If you have a photo with caliper readings, an old sample, or the assembly conditions,
+          we can help confirm the correct option and reduce the risk of wrong parts.
+        </p>
+        <p>
+          <b>Email:</b> <a href="mailto:info@backup-parts.com">info@backup-parts.com</a>  
+          <span class="muted">— include “O-ring RFQ” in the subject for faster routing.</span>
+        </p>
+
+        <div class="miniRow">
+          <span class="chip">Custom sizes</span>
+          <span class="chip">Multi-spec / multi-color</span>
+          <span class="chip">Maintenance kits</span>
+          <span class="chip">Export packing</span>
+        </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="card">
+        <div class="asideHead">
+          <h2 style="margin:0;">Quick Navigation</h2>
+          <span class="badge">Helpful</span>
+        </div>
+
+        <div class="toc">
+          <a href="#summary">60-second summary</a>
+          <a href="#sizes">1) Size & units</a>
+          <a href="#material">2) Material selection</a>
+          <a href="#quantity">3) Quantity & timeline</a>
+          <a href="#tolerance">4) Tolerances & fit</a>
+          <a href="#packing">5) Packaging & labeling</a>
+          <a href="#rfq-template">RFQ template</a>
+          <a href="#cta">Get help</a>
+        </div>
+
+        <div class="quoteBox">
+          <div class="asideHead" style="margin-bottom:6px;">
+            <h3 style="margin:0;">Send an inquiry</h3>
+            <span class="badge" style="color:#0b3a66; background:rgba(11,58,102,.10); border-color:rgba(11,58,102,.18);">24–48h</span>
+          </div>
+          <p class="muted" style="margin:0 0 8px;">
+            This opens your email client with details pre-filled.
+          </p>
+
+          <form action="mailto:info@backup-parts.com" method="post" enctype="text/plain">
+            <label>Name / Company</label>
+            <input name="Name" placeholder="Your name / company" />
+
+            <label>Email</label>
+            <input name="Email" placeholder="your@email.com" />
+
+            <label>RFQ details</label>
+            <textarea name="Requirements" placeholder="Paste the RFQ template here..."></textarea>
+
+            <div style="margin-top:12px;">
+              <button class="btn" type="submit">Send RFQ</button>
+              <div class="hint">Tip: Attach photos/drawings in your email before sending.</div>
+            </div>
+          </form>
+        </div>
+
+        <div class="callout" style="margin-top:12px;">
+          <b>Common fast wins</b>
+          <ul style="margin:8px 0 0;">
+            <li>Include unit (mm/inch)</li>
+            <li>Medium + temperature if material unknown</li>
+            <li>Photo with caliper reading for unknown size</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © 2026 Backup Parts • <a href="../index.html">Back to Home</a>
+    </footer>
+  </div>
+</body>
+</html>
