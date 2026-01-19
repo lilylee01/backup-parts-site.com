@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Backup Parts | Custom O-Rings & Industrial Sealing Solutions</title>
   <meta name="description" content="Backup Parts supplies standard and custom O-rings, sealing components, and rubber parts for industrial maintenance and OEM applications. Export-ready service with fast quotation." />
-
   <style>
     :root{
       --bg:#f6f7fb;
@@ -51,14 +50,12 @@
     }
     .brand .name{ font-weight:800; letter-spacing:.2px; }
     .brand .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
-
     .nav{
       display:flex; gap:14px; flex-wrap:wrap; justify-content:center;
       color:#374151; font-weight:600; font-size:14px;
     }
     .nav a{ padding:8px 10px; border-radius:999px; }
     .nav a:hover{ background:rgba(15,94,168,.08); }
-
     .cta{
       display:flex; gap:10px; align-items:center; justify-content:flex-end;
       min-width: 220px;
@@ -68,6 +65,7 @@
       background:rgba(255,255,255,.85);
       padding:9px 12px; border-radius:999px;
       font-size:13px; color:#374151;
+      white-space:nowrap;
     }
     .btn{
       background:linear-gradient(135deg,var(--brand),var(--brand2));
@@ -78,10 +76,11 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      gap:8px;
     }
     .btn:hover{ transform: translateY(-1px); }
 
-    /* Hero */
+    /* Hero layout */
     .hero{
       margin-top:18px;
       display:grid;
@@ -89,15 +88,6 @@
       gap:16px;
       align-items:start;
     }
-
-    /* ✅ 右侧只放一个主卡片，不做两列网格 */
-    .heroRight{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      align-self:start;
-    }
-
     @media (max-width: 920px){
       .hero{ grid-template-columns: 1fr; }
       .cta{ min-width: auto; }
@@ -121,6 +111,7 @@
       transform: rotate(18deg);
       pointer-events:none;
     }
+
     .kicker{
       display:inline-flex; gap:8px; align-items:center;
       font-size:12px; font-weight:800; letter-spacing:.14em;
@@ -130,6 +121,21 @@
       border:1px solid rgba(15,94,168,.15);
       text-transform:uppercase;
     }
+    h1{
+      margin:14px 0 10px;
+      font-size:44px; line-height:1.05; letter-spacing:-.02em;
+    }
+    @media (max-width: 520px){
+      h1{ font-size:34px; }
+    }
+    .sub{
+      margin:0;
+      font-size:16px;
+      color:#374151;
+      line-height:1.6;
+      max-width: 52ch;
+    }
+
     .heroActions{ margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
     .btn2{
       background:#fff; color:var(--brand);
@@ -137,13 +143,13 @@
       padding:10px 14px; border-radius:999px;
       font-weight:800; font-size:13px;
       cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+      display:inline-flex; align-items:center; justify-content:center;
     }
     .btn2:hover{ background:rgba(11,58,102,.06); }
 
+    /* Hero image */
     .heroImage{
+      margin-top:14px;
       background: rgba(255,255,255,.85);
       border: 1px solid var(--line);
       border-radius: var(--radius2);
@@ -152,7 +158,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top:14px;
     }
     .heroImage img{
       width: 100%;
@@ -162,6 +167,7 @@
       display:block;
     }
 
+    /* Trust row */
     .trustRow{
       margin-top:18px;
       display:grid; grid-template-columns: repeat(3, 1fr);
@@ -178,6 +184,16 @@
     }
     .trust b{ display:block; font-size:14px; margin-bottom:4px; }
     .trust span{ color:var(--muted); font-size:13px; }
+
+    /* Right big card */
+    .heroRight{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      align-content:start;
+      align-items:start;
+      grid-auto-rows:min-content;
+    }
 
     .sideCard{
       background:rgba(255,255,255,.85);
@@ -218,31 +234,6 @@
     .li b{ display:block; font-size:13px; margin-bottom:3px; }
     .li span{ display:block; font-size:12px; color:var(--muted); line-height:1.4; }
 
-    /* Sections */
-    section{ margin-top:18px; }
-
-    .card{
-      background:rgba(255,255,255,.85);
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .card h4{ margin:0 0 8px; font-size:16px; }
-    .card p{ margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
-    .card ul{ margin:10px 0 0; padding-left:18px; color:#374151; }
-    .card li{ margin:6px 0; font-size:13px; color:#374151; }
-    .muted{ color:var(--muted); }
-
-    .two{
-      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
-    }
-    @media (max-width: 920px){ .two{ grid-template-columns: 1fr; } }
-
-    /* ✅ Hero下方两列区：更紧凑更“满” */
-    .belowHero{ margin-top:12px; }
-    .belowHero .card, .belowHero .sideCard{ height:auto; }
-
     .mini{
       display:flex; gap:8px; flex-wrap:wrap;
       margin-top:10px;
@@ -253,6 +244,99 @@
       padding:8px 10px; border-radius:999px;
       color:#374151;
     }
+
+    /* Cards / sections */
+    section{ margin-top:18px; }
+
+    .card{
+      background:rgba(255,255,255,.85);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .card h3{ margin:0 0 8px; font-size:18px; }
+    .card h4{ margin:0 0 8px; font-size:16px; }
+    .card p{ margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+    .card ul{ margin:10px 0 0; padding-left:18px; color:#374151; }
+    .card li{ margin:6px 0; font-size:13px; color:#374151; }
+
+    /* ✅ Two columns section (no forced equal height -> no big white blank) */
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      align-items:start; /* key */
+    }
+    .two .card{ height:fit-content; }
+    @media (max-width: 920px){ .two{ grid-template-columns: 1fr; } }
+
+    /* Guides list in how-we-help style */
+    .guideList{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    /* --- Image slider / scroll gallery --- */
+    .gallery{ margin-top:18px; }
+
+    .galleryHead{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .galleryHead h3{ margin:0; font-size:18px; }
+    .muted{ color:var(--muted); }
+    .galleryHead .muted{ margin:0; font-size:13px; }
+
+    .galleryTrack{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      padding:12px;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      box-shadow: var(--shadow);
+    }
+
+    .galleryTrack::-webkit-scrollbar{ height:10px; }
+    .galleryTrack::-webkit-scrollbar-thumb{
+      background: rgba(17,24,39,.18);
+      border-radius: 999px;
+    }
+    .galleryTrack::-webkit-scrollbar-track{
+      background: rgba(17,24,39,.06);
+      border-radius: 999px;
+    }
+
+    .galleryItem{
+      flex:0 0 320px;
+      scroll-snap-align:start;
+      border-radius: 18px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    @media (max-width: 520px){
+      .galleryItem{ flex-basis: 78vw; }
+    }
+    .galleryItem img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+    .galleryCap{ padding:10px 12px 12px; }
+    .galleryCap b{ display:block; font-size:13px; margin-bottom:4px; }
+    .galleryCap span{ display:block; font-size:12px; color:var(--muted); line-height:1.4; }
 
     /* Contact */
     .contact{
@@ -280,63 +364,8 @@
       font-size:12px;
       text-align:center;
     }
-
-    /* --- Image slider / scroll gallery --- */
-    .gallery{ margin-top:18px; }
-    .galleryHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      margin-bottom:10px;
-    }
-    .galleryHead h3{ margin:0; font-size:18px; }
-    .galleryHead .muted{ margin:0; font-size:13px; }
-
-    .galleryTrack{
-      display:flex;
-      gap:12px;
-      overflow-x:auto;
-      padding:12px;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling: touch;
-      border-radius: var(--radius2);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.75);
-      box-shadow: var(--shadow);
-    }
-    .galleryTrack::-webkit-scrollbar{ height:10px; }
-    .galleryTrack::-webkit-scrollbar-thumb{
-      background: rgba(17,24,39,.18);
-      border-radius: 999px;
-    }
-    .galleryTrack::-webkit-scrollbar-track{
-      background: rgba(17,24,39,.06);
-      border-radius: 999px;
-    }
-    .galleryItem{
-      flex:0 0 320px;
-      scroll-snap-align:start;
-      border-radius: 18px;
-      overflow:hidden;
-      background:#fff;
-      border:1px solid var(--line);
-    }
-    @media (max-width: 520px){
-      .galleryItem{ flex-basis: 78vw; }
-    }
-    .galleryItem img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      display:block;
-    }
-    .galleryCap{ padding:10px 12px 12px; }
-    .galleryCap b{ display:block; font-size:13px; margin-bottom:4px; }
-    .galleryCap span{ display:block; font-size:12px; color:var(--muted); line-height:1.4; }
   </style>
 </head>
-
 <body>
   <div class="wrap">
 
@@ -362,6 +391,7 @@
       </div>
     </div>
 
+    <!-- HERO -->
     <div class="hero">
       <!-- LEFT -->
       <div class="heroCard">
@@ -399,13 +429,14 @@
         </div>
       </div>
 
-      <!-- RIGHT：只保留 How we help（更舒服，不堆右边） -->
+      <!-- RIGHT (only one big card -> better proportion, less empty space) -->
       <div class="heroRight">
         <div class="sideCard">
           <div class="sideHead">
             <h3 style="margin:0;">How we help buyers</h3>
             <div class="badge">B2B Supplier</div>
           </div>
+
           <p>Share your specs and application conditions, and we’ll recommend materials and provide an efficient quotation.</p>
 
           <ul class="list">
@@ -416,6 +447,7 @@
                 <span>NBR / FKM / EPDM options based on oil, fuel, water, steam, and temperature.</span>
               </div>
             </li>
+
             <li class="li">
               <span class="dot"></span>
               <div>
@@ -423,6 +455,7 @@
                 <span>ID / OD / CS, tolerance requirements, and special compounds available.</span>
               </div>
             </li>
+
             <li class="li">
               <span class="dot"></span>
               <div>
@@ -441,10 +474,10 @@
         </div>
       </div>
     </div>
-    <!-- ✅ hero ends -->
+    <!-- HERO END -->
 
-    <!-- ✅ Hero 下方两列：Typical + Guides（Guides 做成 How we help 同款） -->
-    <section class="belowHero two" id="overview">
+    <!-- ✅ Fill the page: move Typical + Guides below hero as a balanced two-column section -->
+    <section class="two" id="quick-info">
       <div class="card">
         <h3>Typical Applications</h3>
         <ul>
@@ -456,25 +489,19 @@
         </ul>
       </div>
 
-      <div class="sideCard">
-        <div class="sideHead">
+      <div class="card">
+        <div class="sideHead" style="margin-bottom:10px;">
           <h3 style="margin:0;">Guides & Knowledge</h3>
-          <div class="badge" style="color:#0b3a66;background:rgba(15,94,168,.10);border-color:rgba(15,94,168,.18);">
-            Guides
-          </div>
+          <div class="badge" style="color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.18);">Guides</div>
         </div>
 
-        <p>Engineering guides for O-rings, sealing materials, and custom components.</p>
+        <p class="muted" style="margin:0;">Practical checklists to speed up quoting and reduce mistakes.</p>
 
-        <ul class="list">
+        <ul class="guideList">
           <li class="li">
             <span class="dot"></span>
             <div>
-              <b>
-                <a href="/guides/how-to-choose-custom-robotic-gripper.html">
-                  How to Choose a Custom Robotic Gripper for Irregular-Shaped Parts
-                </a>
-              </b>
+              <b>How to Choose a Custom Robotic Gripper</b>
               <span>Quick checklist + what info to send for accurate selection.</span>
             </div>
           </li>
@@ -483,7 +510,7 @@
             <span class="dot"></span>
             <div>
               <b>Quote checklist</b>
-              <span>ID/OD/CS, quantity, medium, temperature range, drawings/photos.</span>
+              <span>ID / OD / CS, quantity, medium, temperature range, drawings/photos.</span>
             </div>
           </li>
 
@@ -505,7 +532,7 @@
       </div>
     </section>
 
-    <!-- ✅ gallery 在 hero 外面 -->
+    <!-- GALLERY -->
     <section class="gallery" id="gallery">
       <div class="galleryHead">
         <div>
@@ -517,6 +544,7 @@
 
       <div class="galleryTrack">
         <div class="galleryItem">
+          <!-- NOTE: your filename is "withe oring.jpg" (typo) -> keep exactly -->
           <img src="assets/images/withe%20oring.jpg" alt="White O-ring">
           <div class="galleryCap">
             <b>White O-ring</b>
@@ -542,6 +570,7 @@
       </div>
     </section>
 
+    <!-- QUOTE -->
     <section id="quote" class="contact">
       <div class="card">
         <h4>Request a Quote</h4>
