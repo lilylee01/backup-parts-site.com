@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>O-Ring Selection Guide (NBR vs FKM vs EPDM) + Sizing & Tolerance Checklist | Backup Parts</title>
+  <meta name="description" content="A practical O-ring selection guide for buyers and engineers: how to choose material (NBR/FKM/EPDM), confirm ID/OD/CS, tolerances, medium & temperature, and avoid common quoting mistakes. Includes a ready-to-send RFQ checklist and fast quotation workflow." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-selection-guide.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Selection Guide (NBR vs FKM vs EPDM) + Sizing & Tolerance Checklist" />
+  <meta property="og:description" content="Materials, sizing, tolerances, and what to confirm before you order. Includes an RFQ checklist and fast quote workflow." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://backup-parts.com/guides/o-ring-selection-guide.html" />
+  <meta property="og:site_name" content="Backup Parts" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --brand:#0b3a66;
+      --brand2:#0f5ea8;
+      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 980px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.12), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{ color:inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:26px 16px 80px; }
+
+    /* top pill header */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.75);
+      border-radius:999px;
+      box-shadow: 0 6px 18px rgba(17,24,39,.06);
+      backdrop-filter: blur(10px);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 180px;
+    }
+    .brand img{
+      width:40px; height:40px; object-fit:contain;
+      border-radius:12px; background:#fff; border:1px solid var(--line);
+      padding:6px;
+    }
+    .brand .name{ font-weight:800; letter-spacing:.2px; }
+    .brand .tag{ font-size:12px; color:var(--muted); margin-top:2px; }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+      font-weight:700; font-size:13px; color:#374151;
+    }
+    .nav a{ text-decoration:none; padding:8px 10px; border-radius:999px; }
+    .nav a:hover{ background:rgba(15,94,168,.08); }
+    .cta{ display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:180px; }
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.9);
+      padding:9px 12px; border-radius:999px;
+      font-size:12.5px; color:#374151;
+      white-space:nowrap;
+    }
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 14px;
+      border-radius:999px; font-weight:800; font-size:13px;
+      box-shadow: 0 10px 24px rgba(15,94,168,.22);
+      cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+
+    /* article card */
+    .card{
+      margin-top:16px;
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding:22px;
+      overflow:hidden;
+      position:relative;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-120px -140px auto auto;
+      width:380px; height:380px;
+      background: radial-gradient(circle at 30% 30%, rgba(15,94,168,.16), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-size:12px; font-weight:800; letter-spacing:.12em;
+      color:var(--brand2);
+      background:rgba(15,94,168,.10);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.15);
+      text-transform:uppercase;
+    }
+    h1{
+      margin:14px 0 8px;
+      font-size:34px; line-height:1.15; letter-spacing:-.02em;
+    }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      color:var(--muted); font-size:12.5px;
+      margin-bottom:14px;
+    }
+    .meta .chip{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:700;
+      color:#374151;
+    }
+
+    .lead{
+      margin:0 0 14px;
+      color:#374151;
+      line-height:1.75;
+      font-size:15px;
+      max-width: 72ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+      .cta, .brand{ min-width:auto; }
+    }
+
+    .box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: 18px;
+      padding:14px;
+    }
+    .box h2{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+    .box p{ margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+
+    .steps{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+    .step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding:12px 12px;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      margin-top:5px;
+      flex:0 0 auto;
+    }
+    .step b{ display:block; font-size:13px; margin-bottom:3px; }
+    .step span{ display:block; font-size:12.5px; color:var(--muted); line-height:1.55; }
+
+    .callout{
+      margin-top:14px;
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.18);
+      border-radius: 18px;
+      padding:14px;
+    }
+    .callout b{ display:block; margin-bottom:6px; }
+    .callout p{ margin:0; color:#374151; line-height:1.7; font-size:13.5px; }
+
+    .actions{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .btn2{
+      background:#fff;
+      color:var(--brand);
+      border:1px solid rgba(11,58,102,.28);
+      padding:10px 14px; border-radius:999px;
+      font-weight:800; font-size:13px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .btn2:hover{ background:rgba(11,58,102,.06); }
+
+    .hr{
+      margin:18px 0;
+      border:0;
+      border-top:1px solid var(--line);
+    }
+
+    h3{
+      margin:16px 0 8px;
+      font-size:16px;
+    }
+    ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:#374151;
+    }
+    li{ margin:7px 0; line-height:1.65; font-size:13.5px; }
+
+    .faq{
+      margin-top:14px;
+      display:grid;
+      gap:10px;
+    }
+    details{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding:12px 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:#111827;
+      font-size:13.5px;
+    }
+    details p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .footer{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+
+    .small{
+      font-size:12.5px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+    .inlineLink{
+      color:var(--brand2);
+      font-weight:800;
+      text-decoration:none;
+    }
+    .inlineLink:hover{ text-decoration:underline; }
+
+    /* Make content AI-friendly: generous spacing, clear headings */
+    article{ position:relative; z-index:1; }
+  </style>
+
+  <!-- FAQ Schema (AI-friendly) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What information do I need for an accurate O-ring quote?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"For an accurate quote, provide ID/OD/CS (or drawing), quantity, material preference (NBR/FKM/EPDM), medium (oil/fuel/water/steam/gas), temperature range, pressure, and any tolerance or certification requirements."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"How do I choose between NBR, FKM, and EPDM?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"NBR is common for oils and general industrial use; FKM is typically chosen for higher temperature and many fuels/chemicals; EPDM is often selected for water/steam and outdoor aging resistance. Final choice depends on your medium, temperature, and chemical compatibility."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Should I specify tolerance for ID/OD/CS?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. If you have a critical seal function or groove design, specify tolerance for ID/OD/CS and any compression targets. If you are unsure, share your application and we can recommend a practical tolerance range."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"How to Select an O-ring for Industrial Sealing",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm medium & temperature","text":"List the working medium (oil/fuel/water/steam/gas) and operating temperature range."},
+      {"@type":"HowToStep","name":"Choose material family","text":"Select NBR/FKM/EPDM based on medium compatibility, temperature, and aging resistance."},
+      {"@type":"HowToStep","name":"Confirm size (ID/OD/CS)","text":"Provide ID/OD/CS or a drawing/photo with measurement reference."},
+      {"@type":"HowToStep","name":"Set tolerance & quantity","text":"Share tolerance needs, quantity, and whether you need sample or small-batch production."},
+      {"@type":"HowToStep","name":"Send RFQ checklist","text":"Send a complete RFQ so the supplier can quote accurately and faster."}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <div class="topbar">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo">
+        <div>
+          <div class="name">Backup Parts</div>
+          <div class="tag">Custom O-Rings & Sealing Components</div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Request Quote</a>
+      </div>
+    </div>
+
+    <!-- Article -->
+    <div class="card">
+      <article>
+        <div class="kicker">Practical Guide</div>
+        <h1>O-Ring Selection Guide: Material, Sizing, and Tolerances (NBR vs FKM vs EPDM)</h1>
+
+        <div class="meta">
+          <span class="chip">Updated: 2026</span>
+          <span class="chip">For buyers & engineers</span>
+          <span class="chip">Fast RFQ checklist</span>
+        </div>
+
+        <p class="lead">
+          Most O-ring issues are not “bad rubber”—they come from missing info: the wrong material for the medium,
+          unclear temperature range, or incomplete sizing (ID/OD/CS) and tolerance. This guide is a compact, experience-based checklist
+          to help you select the right O-ring and send a quote request that gets you a fast, accurate price.
+        </p>
+
+        <div class="grid">
+          <div class="box">
+            <h2>When to use this guide</h2>
+            <p>
+              Use this page when you need (1) a replacement O-ring, (2) a small batch for maintenance, or (3) a custom size/material
+              for a project—especially when the medium or temperature is non-standard.
+            </p>
+          </div>
+
+          <div class="box">
+            <h2>What we can support</h2>
+            <p>
+              Standard and custom sizes, multiple materials (NBR/FKM/EPDM/HNBR/Silicone), multi-spec & color options,
+              and customized maintenance kits with labeling and export-ready packing.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Fast quotation tip</b>
+          <p>
+            If you include <b>ID/OD/CS + medium + temperature + quantity</b>, you avoid most back-and-forth.
+            If you have a drawing or a photo with a ruler/caliper, attach it—this speeds up selection and reduces rework.
+          </p>
+        </div>
+
+        <h3>Step-by-step: choose the right O-ring</h3>
+        <div class="steps">
+          <div class="step">
+            <span class="dot"></span>
+            <div>
+              <b>1) Confirm medium & temperature</b>
+              <span>Tell the supplier what the seal touches (oil/fuel/water/steam/gas/chemical) and your operating temperature range (min/max).</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="dot"></span>
+            <div>
+              <b>2) Pick a material family (NBR vs FKM vs EPDM)</b>
+              <span>
+                <b>NBR</b> is common for oils & general industrial use; <b>FKM</b> is typically for higher temperature and many fuels/chemicals;
+                <b>EPDM</b> is often chosen for water/steam and outdoor aging resistance. Final selection depends on compatibility.
+              </span>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="dot"></span>
+            <div>
+              <b>3) Confirm size (ID / OD / CS)</b>
+              <span>
+                Provide ID/OD/CS if known. If not, send the groove info or a photo with measurement reference.
+                Many quoting delays happen because only “diameter” is given without cross-section.
+              </span>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="dot"></span>
+            <div>
+              <b>4) Tolerance & performance notes</b>
+              <span>
+                If the seal is tolerance-critical, specify tolerance for ID/OD/CS and any hardness requirement.
+                If you’re unsure, share the application and we’ll recommend a practical tolerance range.
+              </span>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="dot"></span>
+            <div>
+              <b>5) Quantity & delivery (samples / small batch / repeat orders)</b>
+              <span>
+                Let us know the quantity, sampling need, and delivery target. For recurring procurement,
+                labeling and batch traceability reduce receiving-side questions.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr"/>
+
+        <h3>RFQ checklist (copy/paste)</h3>
+        <p class="small">
+          You can copy this into an email to get a faster, more accurate quote:
+        </p>
+        <ul>
+          <li><b>Size:</b> ID / OD / CS (or drawing / photo with measurement)</li>
+          <li><b>Quantity:</b> (pcs) + sample needed? (yes/no)</li>
+          <li><b>Medium:</b> oil / fuel / water / steam / gas / chemical</li>
+          <li><b>Temperature range:</b> min/max °C</li>
+          <li><b>Pressure & motion:</b> static/dynamic, any pressure notes</li>
+          <li><b>Material preference:</b> NBR / FKM / EPDM (or ask for recommendation)</li>
+          <li><b>Tolerance:</b> any critical tolerance requirement</li>
+          <li><b>Packing:</b> labeling, kits, export carton, batch traceability (yes/no)</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn" href="../index.html#quote">Request a Quote</a>
+          <a class="btn2" href="./o-ring-quote-checklist.html">Open: O-Ring Quote Checklist</a>
+          <a class="btn2" href="./o-ring-buying-guide.htm">Open: O-Ring Buying Guide</a>
+        </div>
+
+        <hr class="hr"/>
+
+        <h3>Common mistakes we see (and how to avoid them)</h3>
+        <ul>
+          <li><b>Only one dimension provided:</b> “Diameter” without CS causes wrong sizing. Always confirm ID/OD/CS.</li>
+          <li><b>No medium/temperature:</b> material choice becomes guesswork—this is the #1 reason for premature seal failure.</li>
+          <li><b>Ignoring tolerance on critical seals:</b> for tight grooves or special applications, tolerance matters.</li>
+          <li><b>No batch traceability for recurring orders:</b> labeling and batch info reduces receiving issues and saves time.</li>
+        </ul>
+
+        <h3>FAQ</h3>
+        <div class="faq">
+          <details>
+            <summary>Can you supply multiple specs/colors and maintenance kits?</summary>
+            <p>Yes. We support multi-spec orders, color options where applicable, and customized maintenance kits with labeling and export-ready packing.</p>
+          </details>
+          <details>
+            <summary>How fast can I get a quote?</summary>
+            <p>For clear specs, typical quotation is 24–48 hours. If you attach a drawing/photo and provide medium + temperature, it’s usually faster.</p>
+          </details>
+          <details>
+            <summary>I’m not sure whether to choose NBR/FKM/EPDM. What should I do?</summary>
+            <p>Send your medium, temperature range, and any special requirements. We’ll recommend the material and confirm the risk points before production.</p>
+          </details>
+        </div>
+
+        <hr class="hr"/>
+
+        <p class="small">
+          Want more practical sealing tips? We publish short, experience-based guides—materials, sizing, tolerances, and what to confirm before you order.
+          Bookmark this page and check back for updates, or email us your application details for a faster recommendation.
+        </p>
+      </article>
+    </div>
+
+    <div class="footer">
+      © 2026 Backup Parts. Practical guides for O-rings and sealing components.
+    </div>
+
+  </div>
+</body>
+</html>
