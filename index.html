@@ -102,6 +102,40 @@
   gap:16px;
   align-items:start; 
 }
+
+    /* RIGHT COLUMN GRID (make modules compact) */
+.heroRight{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  align-content:start; /* key: stop stretching to full height */
+}
+
+/* make cards fit better in right column */
+.heroRight .card{
+  height:auto;
+}
+
+@media (max-width: 920px){
+  .heroRight{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Optional: if your hero image is inside heroCard, keep it neat */
+.heroMedia{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius: 18px;
+  background:#fff;
+  overflow:hidden;
+}
+.heroMedia img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
     @media (max-width: 920px){
       .hero{ grid-template-columns: 1fr; }
       .cta{ min-width: auto; }
@@ -332,38 +366,7 @@
           </div>
         </div>
       </div>
-<div class="two" style="margin-top:16px;">
-  <div class="card">
-    <h3>Who We Are</h3>
-    <p>
-      Backup Parts combines manufacturing capability with export service. 
-      We focus on sealing-related products including standard O-rings, custom O-rings, and rubber components.
-      Our role is to help customers solve size, material, and application challenges with reliable supply.
-    </p>
-  </div>
 
-  <div class="card">
-    <h3>What We Do</h3>
-    <ul>
-      <li>Standard O-rings in metric and inch sizes</li>
-      <li>Custom O-rings with non-standard dimensions</li>
-      <li>Sealing components and rubber parts</li>
-      <li>Material selection guidance</li>
-      <li>Export packing and documentation</li>
-    </ul>
-  </div>
-</div>
-<div class="two">
-  <div class="card">
-    <h3>Who We Serve</h3>
-    <ul>
-      <li>Industrial maintenance teams</li>
-      <li>OEM equipment manufacturers</li>
-      <li>Spare parts distributors</li>
-      <li>E-commerce sellers</li>
-      <li>International procurement teams</li>
-    </ul>
-  </div>
 
   <div class="card">
     <h3>Typical Applications</h3>
@@ -377,27 +380,7 @@
   </div>
 </div>
 
-      <div class="two">
-  <div class="card">
-    <h3>Why Backup Parts</h3>
-    <ul>
-      <li>Focus on sealing-related products only</li>
-      <li>Support for custom and non-standard sizes</li>
-      <li>Clear specifications and communication</li>
-      <li>Stable supply for repeat orders</li>
-      <li>Export-ready packaging and documents</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>How We Work</h3>
-    <p>
-      We start from your application requirements, including size, medium, temperature range, and environment.
-      Based on this information, we recommend suitable materials and production solutions.
-      Our goal is not only to sell parts, but to reduce your sourcing risk.
-    </p>
-  </div>
-</div>
+  
 
       <div class="two" id="quote-info">
   <div class="card">
