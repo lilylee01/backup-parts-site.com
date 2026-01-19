@@ -103,6 +103,15 @@
   align-items:start; 
 }
 
+/* Right column inside hero */
+.heroRight{
+  align-self: start;              /* 关键：不要被拉到和左侧一样高 */
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+
     /* RIGHT COLUMN GRID (make modules compact) */
 .heroRight{
   display:grid;
@@ -380,7 +389,48 @@
   </div>
 </div>
 
-  
+    <!-- RIGHT COLUMN (fill the blank area) -->
+  <div class="heroRight">
+
+    <!-- 1) Typical Applications（原右侧空白区的那个模块） -->
+    <div class="card">
+      <h3>Typical Applications</h3>
+      <ul>
+        <li>Hydraulic systems</li>
+        <li>Pumps and valves</li>
+        <li>Fluid and gas sealing</li>
+        <li>Automotive maintenance</li>
+        <li>Industrial machinery</li>
+      </ul>
+    </div>
+
+    <!-- 2) Guides & Knowledge（你要移动的第一块） -->
+    <div class="card">
+      <h3>Guides & Knowledge</h3>
+      <p class="muted">Engineering guides for O-rings, sealing materials, and custom components.</p>
+      <ul>
+        <li>
+          <a href="/guides/how-to-choose-custom-robotic-gripper.html">
+            How to Choose a Custom Robotic Gripper for Irregular-Shaped Parts
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 3) Get Better Specs Faster（你要移动的第二块） -->
+    <div class="card">
+      <h3>Get Better Specs Faster</h3>
+      <p class="muted">If you are unsure about material or dimensions, send application info and we will help confirm the right options.</p>
+      <ul>
+        <li>Medium: oil / fuel / water / steam</li>
+        <li>Temperature range</li>
+        <li>Pressure & motion (static/dynamic)</li>
+        <li>Size format: ID × CS (or OD × ID × CS)</li>
+      </ul>
+    </div>
+
+  </div>
+
 
       <div class="two" id="quote-info">
   <div class="card">
@@ -444,68 +494,9 @@
       </div>
     </div>
 
-       <section id="guides" class="two">
-      <div class="card">
-        <h4>Guides & Knowledge</h4>
-        <p class="muted">Engineering guides for O-rings, sealing materials, and custom components.</p>
-        <ul>
-          <li>
-            <a href="/guides/how-to-choose-custom-robotic-gripper.html">
-              How to Choose a Custom Robotic Gripper for Irregular-Shaped Parts
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Get Better Specs Faster</h4>
-        <p class="muted">If you are unsure about material or dimensions, send application info and we will help confirm the right options.</p>
-        <ul>
-          <li>Medium: oil / fuel / water / steam</li>
-          <li>Temperature range</li>
-          <li>Pressure & motion (static/dynamic)</li>
-          <li>Size format: ID × CS (or OD × ID × CS)</li>
-        </ul>
-      </div>
     </section>
 
-    <section id="capabilities">
-      <div class="grid">
-        <div class="card">
-          <h4>Custom O-Ring Production</h4>
-          <p>Support for non-standard sizes and special requirements. Share drawings or critical dimensions for evaluation.</p>
-        </div>
-        <div class="card">
-          <h4>Specification-Based Quotation</h4>
-          <p>Quote based on size, quantity, material, hardness, color, temperature range, and medium (oil/water/steam).</p>
-        </div>
-        <div class="card">
-          <h4>Supply Consistency</h4>
-          <p>Repeat orders supported with clear labeling, batch management guidance, and stable procurement experience.</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="materials" class="two">
-      <div class="card">
-        <h4>Common Materials</h4>
-        <p class="muted">Selection depends on temperature, chemical exposure, pressure, and application environment.</p>
-        <ul>
-          <li><b>NBR</b> — oil resistance, general industrial use.</li>
-          <li><b>FKM (Viton®)</b> — high temperature, fuels, many chemicals.</li>
-          <li><b>EPDM</b> — water, steam, weather resistance.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4>What to Send for a Fast Quote</h4>
-        <ul>
-          <li>Size: ID × CS (or OD × ID × CS)</li>
-          <li>Quantity & target delivery date</li>
-          <li>Material preference (or application medium)</li>
-          <li>Temperature range and environment</li>
-          <li>Any standards / drawings / photos</li>
-        </ul>
-      </div>
     </section>
 
     <section id="applications" class="grid">
