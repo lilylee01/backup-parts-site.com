@@ -231,6 +231,63 @@
       margin-top:4px;
       flex:0 0 auto;
     }
+
+
+
+  /* Guides list: fixed height + internal scroll */
+.guideScroll{
+  margin-top:12px;
+  display:grid;
+  gap:10px;
+
+  max-height: 260px;          /* ✅ 控制卡片里列表区域高度：你想更紧凑可改 220/240 */
+  overflow:auto;
+  padding-right:6px;          /* 给滚动条留点空间 */
+}
+
+/* nice scrollbar */
+.guideScroll::-webkit-scrollbar{ width:10px; }
+.guideScroll::-webkit-scrollbar-thumb{
+  background: rgba(17,24,39,.18);
+  border-radius: 999px;
+}
+.guideScroll::-webkit-scrollbar-track{
+  background: rgba(17,24,39,.06);
+  border-radius: 999px;
+}
+
+.guideItem{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px 12px;
+  text-decoration:none;
+  color:inherit;
+}
+
+.guideItem:hover{
+  background: rgba(15,94,168,.05);
+  border-color: rgba(15,94,168,.20);
+}
+
+.guideText b{
+  display:block;
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+.guideText span{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+
+    
     .li b{ display:block; font-size:13px; margin-bottom:3px; }
     .li span{ display:block; font-size:12px; color:var(--muted); line-height:1.4; }
 
@@ -260,6 +317,12 @@
     .card p{ margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
     .card ul{ margin:10px 0 0; padding-left:18px; color:#374151; }
     .card li{ margin:6px 0; font-size:13px; color:#374151; }
+
+
+
+
+
+    
 
     /* ✅ Two columns section (no forced equal height -> no big white blank) */
     .two{
@@ -700,64 +763,42 @@ Small-batch and urgent sampling for validation before bulk production
 
         <p class="muted" style="margin:0;">Practical checklists to speed up quoting and reduce mistakes.</p>
 
-       <ul class="guideList">
-  <li class="li">
+    <div class="guideScroll" role="list">
+  <a class="guideItem" href="guides/how-to-choose-custom-robotic-gripper.html">
     <span class="dot"></span>
-    <a class="guideLink" href="guides/how-to-choose-custom-robotic-gripper.html" target="_blank" rel="noopener">
-      <div>
-        <b>How to Choose a Custom Robotic Gripper</b>
-        <span>Quick checklist + what info to send for accurate selection.</span>
-      </div>
-    </a>
-  </li>
+    <div class="guideText">
+      <b>How to Choose a Custom Robotic Gripper</b>
+      <span>Quick checklist + what info to send for accurate selection.</span>
+    </div>
+  </a>
 
-
-         <ul class="guideList">
-  <li class="li">
-    <a class="guideLink" href="guides/o-ring-buying-guide.htm">
-      <span class="dot"></span>
-      <div>
-        <b>O-Ring Buying Guide</b>
-        <span>Materials, sizing, tolerances, and what to confirm before you order.</span>
-      </div>
-    </a>
-  </li>
-
-
-             <li class="li">
-    <a class="guideLink" href="guides/o-ring-quote-checklist.html">
-      <span class="dot"></span>
-      <div>
-        <b>O-Ring Quote Checklist</b>
-        <span>ID / OD / CS, quantity, medium, temperature range, drawings/photos.</span>
-      </div>
-    </a>
-  </li>
-
-
-
-
-         
-  <li class="li">
+  <a class="guideItem" href="guides/o-ring-buying-guide.htm">
     <span class="dot"></span>
-    <a class="guideLink" href="#quote">
-      <div>
-        <b>Quote checklist</b>
-        <span>ID / OD / CS, quantity, medium, temperature range, drawings/photos.</span>
-      </div>
-    </a>
-  </li>
+    <div class="guideText">
+      <b>O-Ring Buying Guide</b>
+      <span>Materials, sizing, tolerances, and what to confirm before you order.</span>
+    </div>
+  </a>
 
-   <li class="li">
-    <a class="guideLink" href="#quote">
-      <span class="dot"></span>
-      <div>
-        <b>Send specs for a fast quote</b>
-        <span>We reply in 24–48 hours with clear specs.</span>
-      </div>
-    </a>
-  </li>
-</ul>
+  <a class="guideItem" href="guides/o-ring-quote-checklist.html">
+    <span class="dot"></span>
+    <div class="guideText">
+      <b>O-Ring Quote Checklist</b>
+      <span>ID / OD / CS, quantity, medium, temperature range, drawings/photos.</span>
+    </div>
+  </a>
+
+  <!-- ✅ 以后新增文章：复制下面这一块粘贴一条即可 -->
+  <!--
+  <a class="guideItem" href="guides/your-new-article.html">
+    <span class="dot"></span>
+    <div class="guideText">
+      <b>New article title</b>
+      <span>One-line description.</span>
+    </div>
+  </a>
+  -->
+</div>
 
 
 
