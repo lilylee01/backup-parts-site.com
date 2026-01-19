@@ -103,15 +103,6 @@
   align-items:start; 
 }
 
-/* Right column inside hero */
-.heroRight{
-  align-self: start;              /* 关键：不要被拉到和左侧一样高 */
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-
     /* RIGHT COLUMN GRID (make modules compact) */
 .heroRight{
   display:grid;
@@ -425,45 +416,45 @@
       </div>
     </div>
 
-    <div class="hero">
-      <div class="heroCard">
-        <div class="kicker">Premium Custom Supply</div>
-       <h1>Custom O-Rings & Industrial Sealing Solutions</h1>
-<p class="sub">
-  Backup Parts is a global supplier of standard and custom O-rings, sealing components, and rubber parts.
-  We support industrial maintenance, OEM manufacturing, and replacement markets with stable supply and export-ready service.
-</p>
+  <div class="hero">
+  <!-- LEFT -->
+  <div class="heroCard">
+    <div class="kicker">Premium Custom Supply</div>
+    <h1>Custom O-Rings & Industrial Sealing Solutions</h1>
 
-        <div class="heroActions">
-          <a class="btn" href="#quote">Request Quotation</a>
-          <a class="btn2" href="#capabilities">View Capabilities</a>
-          <a class="btn2" href="#materials">Material Options</a>
-        </div>
+    <p class="sub">
+      Backup Parts is a global supplier of standard and custom O-rings, sealing components, and rubber parts.
+      We support industrial maintenance, OEM manufacturing, and replacement markets with stable supply and export-ready service.
+    </p>
 
-        <div class="heroImage">
-  <img src="assets/images/standard.jpg" alt="Standard O-rings and sealing components">
-</div>
+    <div class="heroActions">
+      <a class="btn" href="#quote">Request Quotation</a>
+      <a class="btn2" href="#capabilities">View Capabilities</a>
+      <a class="btn2" href="#materials">Material Options</a>
+    </div>
 
-        <div class="trustRow">
-          <div class="trust">
-            <b>Fast Response</b>
-            <span>Typical quote in 24–48 hours for clear specs.</span>
-          </div>
-          <div class="trust">
-            <b>Custom & Standard</b>
-            <span>Metric / Inch sizes, compound selection, drawings supported.</span>
-          </div>
-          <div class="trust">
-            <b>Export Friendly</b>
-            <span>Clear communication, packing support, documentation ready.</span>
-          </div>
-        </div>
+    <div class="heroImage">
+      <img src="assets/images/standard.jpg" alt="Standard O-rings and sealing components">
+    </div>
+
+    <div class="trustRow">
+      <div class="trust">
+        <b>Fast Response</b>
+        <span>Typical quote in 24–48 hours for clear specs.</span>
       </div>
+      <div class="trust">
+        <b>Custom & Standard</b>
+        <span>Metric / Inch sizes, compound selection, drawings supported.</span>
+      </div>
+      <div class="trust">
+        <b>Export Friendly</b>
+        <span>Clear communication, packing support, documentation ready.</span>
+      </div>
+    </div>
+  </div>
 
-    <!-- RIGHT COLUMN (fill the blank area) -->
+  <!-- RIGHT -->
   <div class="heroRight">
-
-    <!-- 1) Typical Applications（原右侧空白区的那个模块） -->
     <div class="card">
       <h3>Typical Applications</h3>
       <ul>
@@ -475,7 +466,6 @@
       </ul>
     </div>
 
-    <!-- 2) Guides & Knowledge（你要移动的第一块） -->
     <div class="card">
       <h3>Guides & Knowledge</h3>
       <p class="muted">Engineering guides for O-rings, sealing materials, and custom components.</p>
@@ -488,49 +478,50 @@
       </ul>
     </div>
 
+    <div class="sideCard">
+      <div class="sideHead">
+        <h3 style="margin:0;">How we help buyers</h3>
+        <div class="badge">B2B Supplier</div>
+      </div>
+      <p>Share your specs and application conditions, and we’ll recommend materials and provide an efficient quotation.</p>
 
-      <div class="sideCard">
-        <div class="sideHead">
-          <h3 style="margin:0;">How we help buyers</h3>
-          <div class="badge">B2B Supplier</div>
-        </div>
-        <p>
-          Share your specs and application conditions, and we’ll recommend materials and provide an efficient quotation.
-        </p>
-        <ul class="list">
-          <li class="li">
-            <span class="dot"></span>
-            <div>
-              <b>Material guidance</b>
-              <span>NBR / FKM / EPDM options based on oil, fuel, water, steam, and temperature.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot"></span>
-            <div>
-              <b>Custom sizes supported</b>
-              <span>ID / OD / CS, tolerance requirements, and special compounds available.</span>
-            </div>
-          </li>
-          <li class="li">
-            <span class="dot"></span>
-            <div>
-              <b>Quality & packaging</b>
-              <span>Sorting, labeling, and export packaging for repeatable procurement.</span>
-            </div>
-          </li>
-        </ul>
+      <ul class="list">
+        <li class="li">
+          <span class="dot"></span>
+          <div>
+            <b>Material guidance</b>
+            <span>NBR / FKM / EPDM options based on oil, fuel, water, steam, and temperature.</span>
+          </div>
+        </li>
+        <li class="li">
+          <span class="dot"></span>
+          <div>
+            <b>Custom sizes supported</b>
+            <span>ID / OD / CS, tolerance requirements, and special compounds available.</span>
+          </div>
+        </li>
+        <li class="li">
+          <span class="dot"></span>
+          <div>
+            <b>Quality & packaging</b>
+            <span>Sorting, labeling, and export packaging for repeatable procurement.</span>
+          </div>
+        </li>
+      </ul>
 
-        <div class="mini">
-          <span class="chip">Custom O-rings</span>
-          <span class="chip">Sealing kits</span>
-          <span class="chip">Rubber parts</span>
-          <span class="chip">OEM support</span>
-        </div>
+      <div class="mini">
+        <span class="chip">Custom O-rings</span>
+        <span class="chip">Sealing kits</span>
+        <span class="chip">Rubber parts</span>
+        <span class="chip">OEM support</span>
       </div>
     </div>
+  </div>
+</div>
+<!-- ✅ hero 正确结束 -->
 
-      <section class="gallery" id="gallery">
+<!-- ✅ gallery 必须在 hero 外面 -->
+<section class="gallery" id="gallery">
   <div class="galleryHead">
     <div>
       <h3>Photos</h3>
@@ -567,6 +558,9 @@
 </section>
 
 
+           
+    
+    
     </section>
 
     <section id="quote" class="contact">
