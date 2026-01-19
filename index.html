@@ -364,6 +364,114 @@
       font-size:12px;
       text-align:center;
     }
+
+
+
+    /* ===== Factory Showcase (horizontal scroll) ===== */
+.factoryShowcase{
+  margin-top:18px;
+}
+
+.factoryHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.factoryHead h3{
+  margin:0;
+  font-size:18px;
+}
+
+.factoryHead p{
+  margin:0;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.factoryTrack{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:12px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius2);
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.75);
+  box-shadow: var(--shadow);
+}
+
+.factoryTrack::-webkit-scrollbar{ height:10px; }
+.factoryTrack::-webkit-scrollbar-thumb{
+  background: rgba(17,24,39,.18);
+  border-radius: 999px;
+}
+.factoryTrack::-webkit-scrollbar-track{
+  background: rgba(17,24,39,.06);
+  border-radius: 999px;
+}
+
+.factoryItem{
+  flex:0 0 360px;
+  scroll-snap-align:start;
+  border-radius: 18px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+}
+
+@media (max-width: 520px){
+  .factoryItem{ flex-basis: 82vw; }
+}
+
+.factoryItem img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.factoryCap{
+  padding:10px 12px 12px;
+}
+
+.factoryTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:6px;
+}
+
+.factoryTop b{
+  display:block;
+  font-size:13px;
+}
+
+.factoryTag{
+  font-size:12px;
+  font-weight:800;
+  color:#065f46;
+  background:rgba(16,185,129,.12);
+  border:1px solid rgba(16,185,129,.18);
+  padding:6px 10px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+
+.factoryCap span{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+
+
+    
   </style>
 </head>
 <body>
@@ -609,6 +717,60 @@ Small-batch and urgent sampling for validation before bulk production
       </div>
     </section>
 
+
+
+<!-- ===== Factory Showcase (put this right after HERO, before Photos) ===== -->
+<section class="factoryShowcase" id="factory">
+  <div class="factoryHead">
+    <div>
+      <h3>Factory Floor • QC & Packing</h3>
+      <p>Incoming material check, key-dimension sampling, batch traceability, and export-ready packing.</p>
+    </div>
+    <p>← scroll</p>
+  </div>
+
+  <div class="factoryTrack">
+    <div class="factoryItem">
+      <img src="assets/images/making.png" alt="O-ring production on the factory floor">
+      <div class="factoryCap">
+        <div class="factoryTop">
+          <b>On-site Production</b>
+          <span class="factoryTag">Making</span>
+        </div>
+        <span>Molding / trimming / in-process inspection for stable quality.</span>
+      </div>
+    </div>
+
+    <div class="factoryItem">
+      <img src="assets/images/packing.png" alt="Packing and labeling for shipment">
+      <div class="factoryCap">
+        <div class="factoryTop">
+          <b>Labeling & Packing</b>
+          <span class="factoryTag">Packing</span>
+        </div>
+        <span>Label verification + packing check before shipment to reduce receiving issues.</span>
+      </div>
+    </div>
+
+    <div class="factoryItem">
+      <img src="assets/images/packing.png" alt="QC sampling and batch traceability">
+      <div class="factoryCap">
+        <div class="factoryTop">
+          <b>QC Sampling & Traceability</b>
+          <span class="factoryTag">QC</span>
+        </div>
+        <span>Key dimensions sampled (ID/OD/CS) with lot tracking for repeat orders.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    
     <!-- GALLERY -->
     <section class="gallery" id="gallery">
       <div class="galleryHead">
