@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Incoming Inspection (2026): Visual Check, Dimensional Sampling & Batch Traceability Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly O-ring incoming inspection guide for industrial buyers and maintenance teams: visual checks, dimensional sampling, documentation (COA/batch), labeling, storage, and a copy/paste acceptance checklist to reduce leaks and rework." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-incoming-inspection-traceability-checklist.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Incoming Inspection: Sampling + Traceability Checklist (2026)" />
+  <meta property="og:description" content="A practical acceptance checklist for O-ring receiving: visual defects, dimensional sampling, COA/batch traceability, labeling, and storage notes." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* Layout variation: section nav pills */
+    .pills{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+    .pills a{
+      font-size:12px; font-weight:800; color:#374151;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.85);
+      padding:7px 10px; border-radius:999px;
+    }
+    .pills a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+
+    /* 3-column inspection cards */
+    .grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;}
+    @media (max-width:980px){ .grid3{grid-template-columns:1fr;} }
+    .box{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .box h3{margin:0 0 6px; font-size:16px;}
+    .box p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .small{font-size:12px; color:var(--muted); line-height:1.6;}
+    .check{margin:10px 0 0; padding-left:18px;}
+    .check li{margin:8px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Risk meter */
+    .meterWrap{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+    @media (max-width:820px){ .meterWrap{grid-template-columns:1fr;} }
+    .meter{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .bar{height:10px; border-radius:999px; background:rgba(17,24,39,.06); border:1px solid rgba(17,24,39,.08); overflow:hidden; margin:8px 0 10px;}
+    .fill{height:100%; width:55%; background:linear-gradient(90deg, rgba(15,94,168,.55), rgba(15,94,168,.85));}
+
+    /* Table */
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:#fff; margin-top:10px;}
+    th,td{padding:12px 12px; border-bottom:1px solid var(--line); vertical-align:top; font-size:13px; color:#374151;}
+    th{background:rgba(15,94,168,.06); color:#111827; text-align:left; font-weight:900;}
+    tr:last-child td{border-bottom:none;}
+
+    /* Copy card */
+    .copyCard{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;
+      box-shadow:0 10px 22px rgba(17,24,39,.05);
+    }
+    .copyCard code{display:block; white-space:pre-wrap; background:rgba(17,24,39,.05); padding:12px; border-radius:14px; font-size:12px; color:#111827; line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Incoming Inspection (2026): Visual Check, Dimensional Sampling & Batch Traceability Checklist",
+    "description":"AI-friendly receiving inspection guide for O-rings: visual defects, dimensional sampling, and documentation/traceability checks.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-incoming-inspection-traceability-checklist.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Perform O-ring incoming inspection and batch traceability checks",
+    "description":"A practical procedure for maintenance and procurement teams to reduce leaks and rework by verifying O-ring lots at receiving.",
+    "totalTime":"PT12M",
+    "step":[
+      {"@type":"HowToStep","name":"Check labeling and batch info","text":"Verify each bag/box has size (ID×CS), material/compound, hardness (if applicable), quantity, and batch/lot number."},
+      {"@type":"HowToStep","name":"Visual inspection","text":"Look for cracks, nicks, flash, contamination, sticky surface, deformation, or mixed sizes in one bag."},
+      {"@type":"HowToStep","name":"Dimensional sampling","text":"Sample ID and CS with calipers. Record results and confirm they match the ordered spec and tolerance needs."},
+      {"@type":"HowToStep","name":"Documentation check","text":"Confirm COA/COC (if required), batch traceability, and any agreed inspection record. File documents by batch/PO."},
+      {"@type":"HowToStep","name":"Storage and FIFO","text":"Store sealed, away from UV/ozone/heat. Apply FIFO to reduce aging-related leaks."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Why do we need batch traceability for O-rings?","acceptedAnswer":{"@type":"Answer","text":"Batch traceability links received parts to a lot number and documents (COA/inspection records). It helps isolate issues, avoid mixing stock, and reduce repeat downtime."}},
+      {"@type":"Question","name":"What should we inspect at receiving to prevent leaks later?","acceptedAnswer":{"@type":"Answer","text":"Focus on: labeling accuracy, visual defects/contamination, dimensional sampling (ID and CS), and documentation (COA/COC if required). Also confirm correct storage and FIFO."}},
+      {"@type":"Question","name":"How many pieces should we sample?","acceptedAnswer":{"@type":"Answer","text":"Sampling depends on risk and volume. A practical baseline is a small sample from each bag/lot (e.g., 3–10 pcs) and increased sampling for critical applications or if previous issues occurred."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Quality & Receiving</div>
+      <h1>O-Ring Incoming Inspection (2026): The 3 Checks That Prevent Repeat Leaks</h1>
+      <p class="sub">
+        Many “field problems” start at receiving: mixed sizes, missing labels, unknown lots, or small dimensional drift that isn’t noticed until assembly.
+        This page gives a simple, repeatable incoming inspection workflow that maintenance and buyers can use without heavy lab equipment:
+        <b>Visual</b>, <b>Dimensional Sampling</b>, and <b>Documentation/Traceability</b>.
+      </p>
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>For: procurement, maintenance stores, service kits</span>
+        <span>Goal: reduce rework + isolate issues fast</span>
+      </div>
+
+      <div class="pills" aria-label="Section navigation">
+        <a href="#why">Why this matters</a>
+        <a href="#three">The 3 checks</a>
+        <a href="#risk">Risk-based sampling</a>
+        <a href="#accept">Accept/Reject matrix</a>
+        <a href="#copy">Copy/paste checklist</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div id="why" class="hr"></div>
+
+      <h2>Why incoming inspection matters (even for “standard” sizes)</h2>
+      <div class="note">
+        <b>Practical reality:</b> leaks are expensive, but the cause is often simple.
+        When a bag has mixed sizes, missing material info, or no batch number, the team loses time with diagnosis and can’t isolate the problem later.
+        A small receiving check prevents weeks of “maybe it’s the groove / maybe it’s the supplier” back-and-forth.
+      </div>
+
+      <div id="three" class="hr"></div>
+
+      <h2>The 3 checks (simple, fast, repeatable)</h2>
+      <div class="grid3">
+        <div class="box">
+          <h3>1) Visual check</h3>
+          <p class="small">Goal: catch obvious defects and mixed stock.</p>
+          <ul class="check">
+            <li>Cracks, nicks, cuts</li>
+            <li>Excess flash, deformation</li>
+            <li>Sticky/tacky surface</li>
+            <li>Contamination (dust/metal chips)</li>
+            <li>Mixed sizes in one bag</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>2) Dimensional sampling</h3>
+          <p class="small">Goal: confirm ID × CS matches spec.</p>
+          <ul class="check">
+            <li>Measure <b>CS</b> (cross section) at 3 points</li>
+            <li>Measure <b>ID</b> (avoid stretching the ring)</li>
+            <li>Record min/max values</li>
+            <li>Increase sampling for critical seals</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>3) Documentation & traceability</h3>
+          <p class="small">Goal: prevent stock mixing and enable root-cause isolation.</p>
+          <ul class="check">
+            <li>Bag label: size + material + qty</li>
+            <li>Batch/lot number on each bag</li>
+            <li>COA/COC if required</li>
+            <li>File records by PO + batch</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="risk" class="hr"></div>
+
+      <h2>Risk-based sampling (how much to check)</h2>
+      <div class="meterWrap">
+        <div class="meter">
+          <b>Risk meter</b>
+          <div class="bar" aria-label="Risk meter"><div class="fill" aria-hidden="true"></div></div>
+          <p class="small" style="margin:0;">
+            Increase sampling if: high pressure, downtime cost is high, previous leak history, multiple subcontracted lots, or unknown storage history.
+            For low-risk general maintenance, a small sample per bag/lot is often enough.
+          </p>
+        </div>
+        <div class="meter" style="background:linear-gradient(135deg, rgba(11,58,102,.06), rgba(15,94,168,.08)); border-color:rgba(15,94,168,.14);">
+          <b>Good baseline</b>
+          <p class="small" style="margin:0 0 10px;">
+            Practical baseline: sample a few pieces from each bag/lot (e.g., 3–10 pcs), and sample more for critical applications.
+            The point is consistency and traceability, not perfection.
+          </p>
+          <a class="btn" href="../index.html#quote">Request Quotation</a>
+        </div>
+      </div>
+
+      <div id="accept" class="hr"></div>
+
+      <h2>Accept / Reject matrix (quick decision)</h2>
+      <table aria-label="Accept reject matrix">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Accept if…</th>
+            <th>Reject / Hold if…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Labeling</td>
+            <td>Size, material, quantity clearly labeled</td>
+            <td>Missing material/size, unclear label</td>
+          </tr>
+          <tr>
+            <td>Batch traceability</td>
+            <td>Lot/batch number present on every bag</td>
+            <td>No batch info (cannot isolate issues)</td>
+          </tr>
+          <tr>
+            <td>Visual defects</td>
+            <td>No cracks, cuts, contamination</td>
+            <td>Nicks/cuts, sticky surface, mixed sizes</td>
+          </tr>
+          <tr>
+            <td>Dimensional sample</td>
+            <td>ID×CS within your need (standard or tightened)</td>
+            <td>Large drift, inconsistent CS, out-of-round</td>
+          </tr>
+          <tr>
+            <td>Docs (if required)</td>
+            <td>COA/COC provided and linked to batch</td>
+            <td>Docs missing or not linked to lot</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="copy" class="hr"></div>
+
+      <h2>Copy/paste receiving checklist (Pin-friendly)</h2>
+      <div class="copyCard">
+        <p class="small" style="margin:0 0 10px;">
+          Copy this into your receiving SOP or use it as a Pin overlay checklist:
+        </p>
+        <code>
+O-Ring Incoming Inspection (Quick Checklist)
+
+1) Label / Traceability
+- Size: ID × CS
+- Material / compound (and hardness if applicable)
+- Quantity per bag
+- Batch/Lot number on each bag
+- PO reference or internal SKU
+
+2) Visual check (10 seconds)
+- No cracks, cuts, nicks
+- No contamination (dust / chips)
+- No sticky/tacky surface
+- No mixed sizes in one bag
+
+3) Dimensional sample (ID & CS)
+- Measure CS at 3 points (record min/max)
+- Measure ID carefully (avoid stretching)
+- Hold lot if large drift / inconsistent results
+
+4) Documentation (if required)
+- COA/COC available
+- Documents linked to batch/lot
+- File record by PO + lot
+
+5) Storage
+- Keep sealed, away from UV/ozone/heat
+- FIFO rotation
+        </code>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Need us to align labeling/traceability for kits?</h2>
+      <div class="note">
+        If your maintenance team needs less confusion at the shelf, ask for:
+        <b>bag labels per SKU</b>, <b>batch COA</b>, and a <b>simple inspection record</b>.
+        For multi-size kits, we can align labeling and batch tracking to reduce mix-ups.
+      </div>
+
+      <div id="faq" class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Do we really need COA for standard O-rings?</summary>
+          <p>
+            Not always. Many teams only require COA for critical applications. But even without COA, batch labeling and a simple sampling record
+            can dramatically improve traceability and reduce repeat failures.
+          </p>
+        </details>
+        <details>
+          <summary>What should be on the label at minimum?</summary>
+          <p>
+            At minimum: <b>ID × CS</b>, <b>material/compound</b>, <b>quantity</b>, and <b>batch/lot number</b>.
+            Without lot number, you cannot isolate problems later.
+          </p>
+        </details>
+        <details>
+          <summary>How do we avoid mixing lots in the warehouse?</summary>
+          <p>
+            Keep lots sealed, label shelves, and enforce FIFO. If you repack, keep the original lot info and never mix lots in one bag.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide for O-ring receiving inspection and traceability.</p>
+    </article>
+
+  </div>
+</body>
+</html>
