@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why Does My O-Ring Leak Even After Replacement? (2026) 9 Causes + Quick Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly troubleshooting guide: why an O-ring still leaks after replacement. 9 common causes (groove damage, wrong squeeze, twist, contamination, extrusion gap, assembly cuts, back-up ring missing, measurement traps, intermittent groove defects) with quick fixes." />
+  <link rel="canonical" href="https://backup-parts.com/guides/why-o-ring-leaks-after-replacement-troubleshooting.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Does My O-Ring Leak Even After Replacement? 9 Causes + Quick Fix" />
+  <meta property="og:description" content="A practical fault board: symptom → likely cause → first fix. Reduce rework and downtime when a new O-ring still leaks." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* 1-minute locator bar (layout variation) */
+    .locator{
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px;
+    }
+    @media (max-width:980px){ .locator{grid-template-columns:1fr;} }
+    .loc{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;
+    }
+    .loc b{display:block; margin-bottom:6px;}
+    .loc p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .tag{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* 3x3 fault board */
+    .board{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;
+    }
+    @media (max-width:980px){ .board{grid-template-columns:1fr;} }
+    .tile{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;
+    }
+    .tile b{display:block; margin-bottom:6px;}
+    .tile .small{font-size:12px; color:var(--muted); line-height:1.6; margin-top:6px;}
+    .tile ul{margin:8px 0 0; padding-left:18px;}
+    .tile li{margin:6px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* CTA */
+    .ctaCard{display:grid; grid-template-columns:1.1fr .9fr; gap:12px; margin-top:14px;}
+    @media (max-width:820px){ .ctaCard{grid-template-columns:1fr;} }
+    .ctaLeft{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .ctaRight{
+      background:linear-gradient(135deg, rgba(11,58,102,.08), rgba(15,94,168,.10));
+      border:1px solid rgba(15,94,168,.14);
+      border-radius:18px; padding:16px;
+    }
+    .ctaRight b{display:block; margin-bottom:6px;}
+    .small{font-size:12px; color:var(--muted); line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Why Does My O-Ring Leak Even After Replacement? (2026) 9 Causes + Quick Fix Checklist",
+    "description":"AI-friendly troubleshooting guide for leaks after O-ring replacement: groove damage, wrong squeeze, twist, contamination, extrusion gap, assembly cuts, missing back-up ring, measurement traps, intermittent defects.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/why-o-ring-leaks-after-replacement-troubleshooting.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Troubleshoot an O-ring leak after replacement",
+    "description":"A practical 10-minute checklist for diagnosing why a new O-ring still leaks and what to fix first.",
+    "totalTime":"PT10M",
+    "step":[
+      {"@type":"HowToStep","name":"Identify when the leak happens","text":"Does it leak immediately, after running, or intermittently? Timing narrows the likely root cause."},
+      {"@type":"HowToStep","name":"Inspect groove and edges","text":"Check for burrs, scratches, or contamination. These often cause immediate leaks and repeat failures."},
+      {"@type":"HowToStep","name":"Check installation damage","text":"Look for cuts, nicks, twist, or spiral marks on the removed ring."},
+      {"@type":"HowToStep","name":"Confirm squeeze and extrusion risk","text":"Wrong CS, excessive clearance, or missing back-up rings can cause extrusion and early leakage."},
+      {"@type":"HowToStep","name":"Confirm sizing method","text":"If the old ring was worn/stretched/flattened, measure the groove and use ID×CS targets instead."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Why does my O-ring leak immediately after replacement?","acceptedAnswer":{"@type":"Answer","text":"Immediate leaks commonly come from groove burrs/scratches, contamination, or installation cuts. Inspect and deburr the groove and protect the O-ring from sharp edges/threads during assembly."}},
+      {"@type":"Question","name":"What if it leaks only sometimes?","acceptedAnswer":{"@type":"Answer","text":"Intermittent leaks often indicate small groove scratches, debris, or assembly variability (twist/roll). Clean the groove, standardize lubrication/assembly, and check the failure pattern on the removed ring."}},
+      {"@type":"Question","name":"Do I need a back-up ring?","acceptedAnswer":{"@type":"Answer","text":"Back-up rings are often used to reduce extrusion risk in higher pressure or larger clearance gaps. If you see nibbling/extrusion damage, evaluate clearance and consider a back-up ring."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Troubleshooting</div>
+      <h1>Why Does My O-Ring Leak Even After Replacement?</h1>
+      <p class="sub">
+        If a new O-ring still leaks, the cause is often <b>not</b> “bad quality”.
+        Most repeat leaks come from groove condition, installation damage, wrong squeeze, or extrusion risk.
+        This page is a practical fault board: <b>symptom → likely cause → first fix</b>.
+      </p>
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>For: hydraulics, pumps/valves, industrial maintenance</span>
+        <span>Output: 9 causes + quick fixes</span>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>1-minute locator (start here)</h2>
+      <div class="locator" aria-label="Leak timing locator">
+        <div class="loc">
+          <div class="tag">Leaks immediately</div>
+          <b>Groove / edge / contamination</b>
+          <p>Most common: burrs, scratches, debris, or a cut during assembly.</p>
+        </div>
+        <div class="loc">
+          <div class="tag">Leaks after running</div>
+          <b>Twist / extrusion / guidance</b>
+          <p>Look for spiral marks, nibbling, or signs the ring moved under pressure.</p>
+        </div>
+        <div class="loc">
+          <div class="tag">Leaks sometimes</div>
+          <b>Small defects + variability</b>
+          <p>Micro-scratches, trapped debris, inconsistent lubrication/assembly technique.</p>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Fast tip:</b> Keep the removed O-ring. A close-up photo of the damage pattern is often the fastest diagnostic input.
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>9 common causes (and the first fix)</h2>
+      <div class="board" aria-label="Troubleshooting board">
+        <div class="tile">
+          <b>1) Burrs / scratches in the groove</b>
+          <ul>
+            <li><b>Clue:</b> leaks immediately or intermittently</li>
+            <li><b>First fix:</b> clean + deburr + inspect lead-in chamfer</li>
+          </ul>
+          <div class="small">Small scratches can create micro leak paths and cut the new ring during assembly.</div>
+        </div>
+
+        <div class="tile">
+          <b>2) Installation cut (sharp edge / thread)</b>
+          <ul>
+            <li><b>Clue:</b> one nick/cut on the ring surface</li>
+            <li><b>First fix:</b> protect with sleeve, avoid dragging over edges</li>
+          </ul>
+          <div class="small">A single nick can leak even if size is correct.</div>
+        </div>
+
+        <div class="tile">
+          <b>3) Twist during installation</b>
+          <ul>
+            <li><b>Clue:</b> spiral/helical tear after short running</li>
+            <li><b>First fix:</b> install without twist, light lubrication</li>
+          </ul>
+          <div class="small">Common in dynamic seals; twist becomes “spiral failure”.</div>
+        </div>
+
+        <div class="tile">
+          <b>4) Wrong squeeze (CS mismatch)</b>
+          <ul>
+            <li><b>Clue:</b> consistent leakage, especially low pressure</li>
+            <li><b>First fix:</b> confirm CS and gland depth; measure groove</li>
+          </ul>
+          <div class="small">Too little squeeze = leakage; too much = damage during assembly.</div>
+        </div>
+
+        <div class="tile">
+          <b>5) Extrusion risk (clearance gap)</b>
+          <ul>
+            <li><b>Clue:</b> “nibbled” edge / chewing marks</li>
+            <li><b>First fix:</b> evaluate clearance; consider back-up ring</li>
+          </ul>
+          <div class="small">High pressure + gap can push rubber into the gap and tear it.</div>
+        </div>
+
+        <div class="tile">
+          <b>6) Missing / incorrect back-up ring</b>
+          <ul>
+            <li><b>Clue:</b> repeated extrusion-like damage</li>
+            <li><b>First fix:</b> add back-up ring where needed</li>
+          </ul>
+          <div class="small">Back-up rings are a common “cheap fix” when extrusion is the real cause.</div>
+        </div>
+
+        <div class="tile">
+          <b>7) Old-ring measurement trap</b>
+          <ul>
+            <li><b>Clue:</b> you measured a flat/stretched/swollen old ring</li>
+            <li><b>First fix:</b> measure the groove (gland), not the old ring</li>
+          </ul>
+          <div class="small">Aged rings lie—ID/CS can drift from the original standard size.</div>
+        </div>
+
+        <div class="tile">
+          <b>8) Contamination during assembly</b>
+          <ul>
+            <li><b>Clue:</b> embedded particles, scratches, intermittent leak</li>
+            <li><b>First fix:</b> clean groove, control chips/dust, avoid over-lube</li>
+          </ul>
+          <div class="small">Over-lubrication can trap debris and create leak paths.</div>
+        </div>
+
+        <div class="tile">
+          <b>9) Groove geometry mismatch</b>
+          <ul>
+            <li><b>Clue:</b> “works in one unit, leaks in another”</li>
+            <li><b>First fix:</b> compare groove dimensions; standardize the gland</li>
+          </ul>
+          <div class="small">Small groove variation across machines causes “random” leak behavior.</div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Copy/paste: what to send for fast diagnosis</h2>
+      <div class="ctaCard">
+        <div class="ctaLeft">
+          <h3 style="margin:0 0 8px;">Email template</h3>
+          <p class="small" style="margin:0 0 10px;">Send to <b>info@backup-parts.com</b> (or keep internally):</p>
+          <p class="small" style="margin:0;">
+            <b>Leak timing:</b> immediate / after running / intermittent<br/>
+            <b>Size:</b> ID × CS (or groove width/depth)<br/>
+            <b>Application:</b> static / dynamic (reciprocating / rotary)<br/>
+            <b>Pressure:</b> (if known)<br/>
+            <b>Photos:</b> failed ring close-up + groove close-up<br/>
+            <b>Notes:</b> any burrs/threads/ports passed during assembly
+          </p>
+        </div>
+
+        <div class="ctaRight">
+          <b>Want less back-and-forth?</b>
+          <p class="small" style="margin:0 0 10px;">
+            A clear photo of the failure pattern often identifies the root cause faster than long descriptions.
+          </p>
+          <a class="btn" href="../index.html#quote">Request Quotation</a>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Is a repeat leak always a “bad O-ring”?</summary>
+          <p>
+            Not usually. Repeat leaks commonly come from groove damage, installation cuts, contamination, twist, or extrusion risk.
+            Fixing groove and assembly technique often solves the problem without changing supplier.
+          </p>
+        </details>
+        <details>
+          <summary>What is the fastest check I can do on-site?</summary>
+          <p>
+            Inspect the groove for burrs/scratches and look at the removed ring for cuts or spiral marks.
+            These two clues narrow the diagnosis quickly.
+          </p>
+        </details>
+        <details>
+          <summary>What should I measure if the old ring looks flat or stretched?</summary>
+          <p>
+            Measure the groove (gland) width/depth and target ID×CS from the groove, not the worn ring.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly troubleshooting page for leaks after O-ring replacement.</p>
+    </article>
+
+  </div>
+</body>
+</html>
