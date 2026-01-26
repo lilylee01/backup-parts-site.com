@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- TODO: Change these 3 -->
+  <title>Perdita olio dopo cambio O-Ring? Checklist rapida + guida misure (EN/IT)</title>
+  <meta name="description" content="Perdita olio dopo cambio tenuta? Checklist rapida (misura errata, sede segnata, materiale non adatto) + guida O-ring DIN/ISO per manutenzione oleodinamica in Italia. EN/IT." />
+  <link rel="canonical" href="https://YOUR_DOMAIN/PAGE_URL" />
+
+  <!-- Open Graph (Pinterest/FB/LinkedIn previews) -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Hydraulic Oil Leak Fix & O-Ring Guide (EN/IT)"/>
+  <meta property="og:description" content="Quick leak checklist + O-ring sizing/material tips for hydraulic maintenance (Italy). EN/IT."/>
+  <meta property="og:url" content="https://YOUR_DOMAIN/PAGE_URL"/>
+  <!-- TODO: put a full https URL to your hosted image -->
+  <meta property="og:image" content="https://YOUR_DOMAIN/IMAGE_URL"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Hydraulic Oil Leak Fix & O-Ring Guide (EN/IT)"/>
+  <meta name="twitter:description" content="Quick leak checklist + O-ring sizing/material tips for hydraulic maintenance (Italy). EN/IT."/>
+  <meta name="twitter:image" content="https://YOUR_DOMAIN/IMAGE_URL"/>
+
+  <!-- Basic SEO -->
+  <meta name="robots" content="index,follow"/>
+  <meta name="keywords" content="o-ring, oring, kit guarnizioni, tenute oleodinamiche, manutenzione oleodinamica, perdita olio, hydraulic leak, seal replacement, DIN o-ring, ISO o-ring, Italy"/>
+
+  <!-- Article Schema (helps Google) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Perdita olio dopo cambio O-Ring? Checklist rapida + guida misure (EN/IT)",
+    "description":"Checklist rapida per perdita olio dopo sostituzione O-ring + guida misure/materiali per manutenzione oleodinamica (Italia).",
+    "inLanguage":["it","en"],
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://YOUR_DOMAIN/PAGE_URL"},
+    "image":"https://YOUR_DOMAIN/IMAGE_URL"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#95a3b8;
+      --text:#e9eef7;
+      --accent:#ffd24d;
+      --line:rgba(255,255,255,.10);
+      --good:#7CFFB2;
+      --danger:#ff7a7a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(255,210,77,.12), transparent 60%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(124,255,178,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px;}
+    header{
+      padding:26px 18px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      backdrop-filter: blur(8px);
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    h1{margin:14px 0 10px; font-size: clamp(26px, 3.2vw, 40px); line-height:1.15;}
+    .sub{color:var(--muted); margin:0; font-size:16px;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr;} }
+    .card{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      overflow:hidden;
+    }
+    .card .pad{padding:18px;}
+    .heroimg{
+      width:100%;
+      display:block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: rgba(255,255,255,.06);
+    }
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      border-color: rgba(255,210,77,.55);
+      background: rgba(255,210,77,.12);
+    }
+    .btn:hover{transform: translateY(-1px);}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+      margin:8px 8px 0 0;
+    }
+    section{margin-top:18px;}
+    h2{margin:0 0 10px; font-size:22px;}
+    h3{margin:16px 0 8px; font-size:18px;}
+    .muted{color:var(--muted);}
+    .list{
+      margin:0;
+      padding-left:18px;
+    }
+    .callout{
+      border-left:4px solid var(--accent);
+      padding:14px 14px 14px 12px;
+      background: rgba(255,210,77,.08);
+      border-radius:12px;
+      border:1px solid rgba(255,210,77,.18);
+    }
+    .two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 680px){ .two{grid-template-columns:1fr;} }
+    .box{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      background: rgba(255,255,255,.03);
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-right:8px;
+    }
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .small{font-size:13px;}
+    .ok{color:var(--good); font-weight:700;}
+    .bad{color:var(--danger); font-weight:700;}
+    .langtitle{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center;}
+    .anchors a{color:var(--muted); text-decoration:underline; text-underline-offset:3px;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">🔧 Manutenzione oleodinamica · O-Ring · Italia · EN/IT</div>
+      <h1>Perdita olio dopo cambio O-Ring? <span style="color:var(--accent)">Checklist rapida</span> + guida misure/materiali</h1>
+      <p class="sub">
+        Se la perdita appare <b>dopo</b> una sostituzione, spesso il problema non è “l’O-ring è scarso” — ma <i>misura</i>, <i>sede</i> o <i>materiale</i>.
+        Qui trovi un controllo rapido (2–5 minuti) + consigli pratici. Versione bilingue EN/IT.
+      </p>
+
+      <div class="btnrow">
+        <!-- TODO: Put your contact/lead page here -->
+        <a class="btn primary" href="https://YOUR_DOMAIN/CONTACT_URL">Richiedi checklist + misure DIN/ISO</a>
+        <!-- TODO: Put your Pinterest Pin URL here -->
+        <a class="btn" href="https://PIN_URL" rel="noopener" target="_blank">Apri il Pin su Pinterest</a>
+        <a class="btn" href="#en">Jump to English</a>
+      </div>
+
+      <div style="margin-top:10px">
+        <span class="pill">Keywords: kit guarnizioni</span>
+        <span class="pill">tenute oleodinamiche</span>
+        <span class="pill">perdita olio</span>
+        <span class="pill">DIN / ISO O-ring</span>
+        <span class="pill">seal replacement</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div class="pad">
+          <div class="langtitle">
+            <h2 style="margin:0">Checklist rapida (IT)</h2>
+            <div class="anchors small muted">
+              <a href="#cause">Cause</a> · <a href="#check">Check</a> · <a href="#materiali">Materiali</a> · <a href="#cta">Contatti</a>
+            </div>
+          </div>
+
+          <section id="cause">
+            <div class="callout">
+              <b>3 cause più comuni</b> quando la perdita compare dopo il cambio O-ring:
+              <ul class="list" style="margin:10px 0 0">
+                <li><b>Misura errata</b> (ID/CS simile ma non corretta)</li>
+                <li><b>Sede segnata</b> (micro-graffi, ovalizzazione, bordo tagliente)</li>
+                <li><b>Materiale non adatto</b> a olio/temperatura (NBR/FKM/PU/PTFE)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="check">
+            <h3>Check in 2–5 minuti (prima di cambiare “tutto”)</h3>
+            <div class="two">
+              <div class="box">
+                <div class="tag">1) Misura</div>
+                <ul class="list">
+                  <li>Confronta <b>ID</b> e <b>CS</b> (sezione) — non solo “se entra”.</li>
+                  <li>Se l’O-ring è <span class="bad">stirato</span> o <span class="bad">schiacciato</span> in modo anomalo, la misura è sospetta.</li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="tag">2) Sede / Gola</div>
+                <ul class="list">
+                  <li>Cerca segni di <b>taglio</b> o <b>graffi</b> in gola.</li>
+                  <li>Bordi vivi = rischio di danneggiare l’O-ring in montaggio.</li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="tag">3) Materiale</div>
+                <ul class="list">
+                  <li>Olio + temperatura alta → spesso serve <b>FKM</b>.</li>
+                  <li>Movimento/abrasione → valuta <b>PU</b> o profilo diverso.</li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="tag">4) Montaggio</div>
+                <ul class="list">
+                  <li>Lubrifica correttamente, evita torsioni.</li>
+                  <li>Controlla che non ci siano trucioli/sporco in sede.</li>
+                </ul>
+              </div>
+            </div>
+            <p class="muted small" style="margin-top:10px">
+              Nota: questa pagina è guida pratica, non sostituisce un disegno tecnico o specifiche OEM.
+            </p>
+          </section>
+
+          <section id="materiali">
+            <h3>Scelta materiale: indicazioni rapide</h3>
+            <div class="two">
+              <div class="box">
+                <b>NBR</b> <span class="muted">(uso generale)</span>
+                <p class="small muted">Buono per molte applicazioni con oli minerali e temperature moderate.</p>
+              </div>
+              <div class="box">
+                <b>FKM (Viton®)</b> <span class="muted">(temperatura/chem)</span>
+                <p class="small muted">Meglio con temperature più alte e alcuni fluidi più aggressivi.</p>
+              </div>
+              <div class="box">
+                <b>PU</b> <span class="muted">(abrasione/dinamico)</span>
+                <p class="small muted">Spesso scelto per usura/abrasione e componenti dinamici.</p>
+              </div>
+              <div class="box">
+                <b>PTFE</b> <span class="muted">(basso attrito)</span>
+                <p class="small muted">Soluzioni speciali quando serve basso attrito o condizioni particolari.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="cta">
+            <h3>Vuoi la checklist + una lista misure “da manutenzione” (DIN/ISO)?</h3>
+            <p class="muted">
+              Invece di kit “da catalogo”, possiamo condividere una selezione pratica di misure frequenti + note su materiale/uso.
+              Se mi invii <b>Top 10 misure</b> o una lista backorder, rispondo con una proposta chiara (tempi + alternative).
+            </p>
+            <!-- TODO: Put your contact page / WhatsApp landing -->
+            <div class="btnrow">
+              <a class="btn primary" href="https://YOUR_DOMAIN/CONTACT_URL">Contattami / Richiedi la lista</a>
+              <a class="btn" href="#en">Read English version</a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <aside class="card">
+        <!-- TODO: Host the image and put correct URL in og:image and here -->
+        <img
+          class="heroimg"
+          src="https://YOUR_DOMAIN/IMAGE_URL"
+          alt="Before/after hydraulic fitting: leaking old O-ring vs replacement O-ring. Quick leak checklist in English and Italian: wrong size, damaged groove, wrong material."
+          loading="lazy"
+        />
+        <div class="pad">
+          <h2 style="margin:0 0 8px">Pinterest → questo articolo</h2>
+          <p class="muted" style="margin:0">
+            Se pubblichi il Pin, inserisci come link questo URL (la pagina). Così chi salva il Pin può tornare qui e contattarti.
+          </p>
+
+          <div class="btnrow">
+            <!-- TODO: Your page URL -->
+            <a class="btn" href="https://YOUR_DOMAIN/PAGE_URL">Copia link pagina</a>
+            <!-- TODO: Pinterest Pin URL -->
+            <a class="btn primary" href="https://PIN_URL" rel="noopener" target="_blank">Apri Pin</a>
+          </div>
+
+          <hr style="border:0; border-top:1px solid var(--line); margin:14px 0;">
+
+          <h3 style="margin:0 0 8px">关键词（帮助Pinterest/Google理解）</h3>
+          <p class="small muted" style="margin:0">
+            oring · kit guarnizioni · tenute oleodinamiche · perdita olio · manutenzione oleodinamica · DIN O-ring · ISO O-ring · hydraulic leak · seal replacement · Italy
+          </p>
+
+          <hr style="border:0; border-top:1px solid var(--line); margin:14px 0;">
+
+          <p class="small muted" style="margin:0">
+            Suggerimento: crea un Board chiamato “Hydraulic O-Ring Leak Fix | Manutenzione Oleodinamica” e pubblica 5–10 Pin simili (stesso tema).
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- English Version -->
+    <section id="en" class="card" style="margin-top:18px;">
+      <div class="pad">
+        <div class="langtitle">
+          <h2 style="margin:0">English (EN)</h2>
+          <div class="anchors small muted">
+            <a href="#en-causes">Causes</a> · <a href="#en-check">Quick check</a> · <a href="#en-material">Material</a> · <a href="#en-cta">Contact</a>
+          </div>
+        </div>
+
+        <section id="en-causes">
+          <div class="callout">
+            <b>Top 3 causes</b> when a leak shows up right after O-ring replacement:
+            <ul class="list" style="margin:10px 0 0">
+              <li><b>Wrong O-ring size</b> (close, but not correct ID/CS)</li>
+              <li><b>Damaged groove / sealing seat</b> (micro-scratches, sharp edges)</li>
+              <li><b>Wrong material</b> for the oil + temperature (NBR/FKM/PU/PTFE)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="en-check">
+          <h3>2–5 minute quick check (before replacing the whole unit)</h3>
+          <div class="two">
+            <div class="box">
+              <div class="tag">1) Size</div>
+              <ul class="list">
+                <li>Verify <b>ID</b> and <b>CS</b> (cross-section), not just “it fits.”</li>
+                <li>Abnormal stretch/flattening = size mismatch risk.</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="tag">2) Groove</div>
+              <ul class="list">
+                <li>Check for <b>cuts</b> / <b>scratches</b> inside the groove.</li>
+                <li>Sharp edges often damage O-rings during assembly.</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="tag">3) Material</div>
+              <ul class="list">
+                <li>Higher temp or demanding oil → often <b>FKM</b>.</li>
+                <li>Dynamic/abrasion → consider <b>PU</b> or different profiles.</li>
+              </ul>
+            </div>
+            <div class="box">
+              <div class="tag">4) Assembly</div>
+              <ul class="list">
+                <li>Use proper lubrication, avoid twisting.</li>
+                <li>Keep the groove clean (chips/dirt cause leaks).</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="en-material">
+          <h3>Material notes (quick)</h3>
+          <div class="two">
+            <div class="box"><b>NBR</b> <span class="muted">(general)</span><p class="small muted">Common choice for many mineral oil applications with moderate temperatures.</p></div>
+            <div class="box"><b>FKM</b> <span class="muted">(heat/chem)</span><p class="small muted">Better for higher temperatures and certain more aggressive fluids.</p></div>
+            <div class="box"><b>PU</b> <span class="muted">(wear/dynamic)</span><p class="small muted">Often used where abrasion and dynamic sealing are key.</p></div>
+            <div class="box"><b>PTFE</b> <span class="muted">(low friction)</span><p class="small muted">Special solutions when low friction or specific conditions are required.</p></div>
+          </div>
+        </section>
+
+        <section id="en-cta">
+          <h3>Want the checklist + a practical DIN/ISO maintenance size list?</h3>
+          <p class="muted">
+            If you send your <b>Top 10 sizes</b> (or backorder list), I can reply with a clear suggestion (materials + lead time + alternatives).
+          </p>
+          <div class="btnrow">
+            <!-- TODO: Contact page / WhatsApp landing -->
+            <a class="btn primary" href="https://YOUR_DOMAIN/CONTACT_URL">Request the list / Contact</a>
+            <!-- TODO: Pinterest Pin URL -->
+            <a class="btn" href="https://PIN_URL" rel="noopener" target="_blank">Open the Pinterest Pin</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <b>Disclaimer:</b> This page is a practical guide for maintenance teams. For critical systems, follow OEM specs and drawings.
+      </div>
+      <div style="margin-top:8px">
+        © <span id="y"></span> Backup Parts · EN/IT
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </div>
+</body>
+</html>
