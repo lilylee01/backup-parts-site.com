@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Extrusion & Nibbling (2026): Signs, Root Causes, and Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to O-ring extrusion and nibbling: how to identify damage patterns, why it happens (clearance gap, pressure spikes, wrong squeeze, hardness), and what to fix first (back-up ring, reduce gap, adjust CS/hardness). Includes key takeaways + HowTo + FAQ schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-extrusion-nibbling-how-to-fix.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Extrusion & Nibbling: Signs, Causes, Fix Checklist (2026)" />
+  <meta property="og:description" content="Stop repeat seal failures: identify extrusion/nibbling and fix clearance gap, pressure spikes, and back-up ring needs." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* AI-friendly summary block */
+    .summary{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;
+      display:grid; grid-template-columns:1.2fr .8fr; gap:12px; margin-top:12px;
+    }
+    @media (max-width:820px){ .summary{grid-template-columns:1fr;} }
+    .summary b{display:block; margin-bottom:6px;}
+    .klist{margin:0; padding-left:18px;}
+    .klist li{margin:7px 0; color:#374151; font-size:13px; line-height:1.6;}
+    .badge{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Layout variation: symptom cards */
+    .sym{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+    @media (max-width:820px){ .sym{grid-template-columns:1fr;} }
+    .box{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .box p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .check{margin:10px 0 0; padding-left:18px;}
+    .check li{margin:8px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Cause->Fix board */
+    .board{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .board{grid-template-columns:1fr;} }
+    .tile{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;}
+    .tile b{display:block; margin-bottom:6px;}
+    .tile .small{font-size:12px; color:var(--muted); line-height:1.6; margin-top:6px;}
+    .tile ul{margin:8px 0 0; padding-left:18px;}
+    .tile li{margin:6px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* HowTo steps */
+    .steps{margin-top:12px;}
+    .step{
+      display:grid; grid-template-columns:44px 1fr; gap:12px;
+      padding:12px; border:1px solid var(--line); border-radius:18px;
+      background:#fff; margin:10px 0;
+    }
+    .dot{
+      width:34px; height:34px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.16);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--brand2); font-weight:900; font-size:12px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* CTA */
+    .ctaCard{display:grid; grid-template-columns:1.1fr .9fr; gap:12px; margin-top:14px;}
+    @media (max-width:820px){ .ctaCard{grid-template-columns:1fr;} }
+    .ctaLeft{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .ctaRight{
+      background:linear-gradient(135deg, rgba(11,58,102,.08), rgba(15,94,168,.10));
+      border:1px solid rgba(15,94,168,.14);
+      border-radius:18px; padding:16px;
+    }
+    .ctaRight b{display:block; margin-bottom:6px;}
+    .small{font-size:12px; color:var(--muted); line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Extrusion & Nibbling (2026): Signs, Root Causes, and Fix Checklist",
+    "description":"AI-friendly guide to identify O-ring extrusion/nibbling and fix clearance, pressure spikes, and back-up ring needs.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-extrusion-nibbling-how-to-fix.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Fix O-ring extrusion and nibbling failures",
+    "description":"A practical checklist to diagnose extrusion/nibbling and prevent repeat O-ring failures in hydraulic and industrial sealing.",
+    "totalTime":"PT12M",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm damage pattern","text":"Look for nibbling/chewing marks or extruded lips where rubber was pushed into a clearance gap."},
+      {"@type":"HowToStep","name":"Check clearance and pressure spikes","text":"Extrusion risk rises with larger gaps and pressure spikes. Compare if failures happen during load changes."},
+      {"@type":"HowToStep","name":"Verify squeeze and ring stability","text":"Wrong CS or insufficient squeeze can let the ring move and shear. Measure the groove if possible."},
+      {"@type":"HowToStep","name":"Decide on back-up ring","text":"If extrusion marks repeat, evaluate adding a back-up ring or reducing the gap."},
+      {"@type":"HowToStep","name":"Standardize assembly and inspection","text":"Clean the groove, deburr edges, and record lot/batch to isolate repeats."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does O-ring extrusion look like?","acceptedAnswer":{"@type":"Answer","text":"Extrusion often shows a lip or bulge where rubber was pushed into a clearance gap. It may also tear and leave nibbling marks (chewed edges)."}},
+      {"@type":"Question","name":"What is nibbling on an O-ring?","acceptedAnswer":{"@type":"Answer","text":"Nibbling is small chunks or chewed marks on the O-ring edge, commonly caused by extrusion into a gap under pressure and subsequent tearing."}},
+      {"@type":"Question","name":"What is the fastest fix for repeat extrusion?","acceptedAnswer":{"@type":"Answer","text":"The fastest practical fix is often reducing extrusion risk: reduce the clearance gap where possible and/or add a back-up ring. Also verify CS/squeeze and groove condition."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Failure Pattern</div>
+      <h1>O-Ring Extrusion & Nibbling: How to Identify It — and Fix It First</h1>
+      <p class="sub">
+        <b>Direct answer (AI-friendly):</b> If an O-ring has “chewed edges”, missing chunks, or a lip that looks pushed outward,
+        you’re likely seeing <b>extrusion / nibbling</b>. The common drivers are a <b>clearance gap</b> under pressure, pressure spikes,
+        and insufficient ring stability (wrong squeeze/CS). The first practical fix is to <b>reduce the gap</b> and/or add a <b>back-up ring</b>,
+        then standardize groove inspection and assembly.
+      </p>
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>Applies to: hydraulics, pumps/valves, industrial maintenance</span>
+        <span>Goal: prevent repeat “nibbled” O-rings</span>
+      </div>
+
+      <div class="summary">
+        <div>
+          <span class="badge">Key Takeaways</span>
+          <ul class="klist">
+            <li><b>Nibbling</b> usually follows rubber extruding into a gap, then tearing under motion/pressure changes.</li>
+            <li>Repeated failures often mean the <b>clearance gap</b> is too large for the pressure.</li>
+            <li><b>Back-up rings</b> are a common fast fix when extrusion risk is high.</li>
+            <li>Measure the <b>groove</b> if the “old ring” is distorted — it can mislead sizing decisions.</li>
+          </ul>
+        </div>
+        <div class="note" style="margin:0;">
+          <b>Best diagnostic input</b><br/>
+          A close-up photo of the damaged edge + a photo of the groove/port area.
+          <div style="margin-top:10px;">
+            <a class="btn" href="../index.html#quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>What does extrusion vs nibbling look like?</h2>
+      <div class="sym">
+        <div class="box">
+          <h3 style="margin:0 0 6px;">Extrusion (rubber pushed into a gap)</h3>
+          <p>Typical signs:</p>
+          <ul class="check">
+            <li>Raised “lip” or bulge on one side</li>
+            <li>Smearing / flow marks near the edge</li>
+            <li>Damage aligned with a clearance gap direction</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3 style="margin:0 0 6px;">Nibbling (chewed chunks / tearing)</h3>
+          <p>Typical signs:</p>
+          <ul class="check">
+            <li>Small missing chunks on the edge</li>
+            <li>Jagged “bitten” look</li>
+            <li>Often follows extrusion, then tears under motion/spikes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Root causes → first fix (fast fault board)</h2>
+      <div class="board" aria-label="Cause and fix board">
+        <div class="tile">
+          <b>1) Clearance gap too large</b>
+          <ul>
+            <li><b>Clue:</b> repeat nibbling at higher pressure</li>
+            <li><b>First fix:</b> reduce gap if possible; evaluate back-up ring</li>
+          </ul>
+          <div class="small">Extrusion risk rises quickly as gap increases.</div>
+        </div>
+        <div class="tile">
+          <b>2) Pressure spikes / shocks</b>
+          <ul>
+            <li><b>Clue:</b> failure during start/stop or load changes</li>
+            <li><b>First fix:</b> check spike events; stabilize assembly and guidance</li>
+          </ul>
+          <div class="small">Spikes push rubber into gaps and tear edges.</div>
+        </div>
+        <div class="tile">
+          <b>3) Back-up ring missing</b>
+          <ul>
+            <li><b>Clue:</b> repeated extrusion-like marks</li>
+            <li><b>First fix:</b> add back-up ring for high-pressure/large gap cases</li>
+          </ul>
+          <div class="small">Often the fastest field upgrade.</div>
+        </div>
+        <div class="tile">
+          <b>4) Wrong CS / insufficient squeeze</b>
+          <ul>
+            <li><b>Clue:</b> ring moves, then shears at edge</li>
+            <li><b>First fix:</b> verify CS and groove depth; avoid old-ring measurement trap</li>
+          </ul>
+          <div class="small">A stable ring resists being pushed into a gap.</div>
+        </div>
+        <div class="tile">
+          <b>5) Groove damage or burrs</b>
+          <ul>
+            <li><b>Clue:</b> mixed failure patterns, inconsistent results</li>
+            <li><b>First fix:</b> clean groove, deburr, inspect lead-in chamfer</li>
+          </ul>
+          <div class="small">Burrs can start a tear that looks like nibbling.</div>
+        </div>
+        <div class="tile">
+          <b>6) Assembly variability</b>
+          <ul>
+            <li><b>Clue:</b> same part works sometimes</li>
+            <li><b>First fix:</b> standardize lube amount, installation method, and inspection</li>
+          </ul>
+          <div class="small">Small changes can shift the failure threshold.</div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Step-by-step: 12-minute checklist to stop repeat extrusion</h2>
+      <div class="steps" aria-label="HowTo steps">
+        <div class="step">
+          <div class="dot">1</div>
+          <div>
+            <b>Confirm the damage pattern</b>
+            <p>Look for a lip/bulge (extrusion) and chewed edges (nibbling). Take a clear close-up photo.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">2</div>
+          <div>
+            <b>Check where the gap is</b>
+            <p>Identify potential clearance gaps near ports, split lines, or moving interfaces. Damage direction often points to the gap.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">3</div>
+          <div>
+            <b>Check for pressure spikes</b>
+            <p>Note if failures happen at start/stop, load changes, or relief events. Spikes amplify extrusion risk.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">4</div>
+          <div>
+            <b>Verify squeeze stability</b>
+            <p>If the old ring was flattened/stretched, measure the groove. Confirm CS is not too small and the ring is stable.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">5</div>
+          <div>
+            <b>Apply the fastest fix first</b>
+            <p>If extrusion marks repeat: reduce the gap where possible and/or add a back-up ring. Standardize cleaning + deburring.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Copy/paste: what to send for a quick recommendation</h2>
+      <div class="ctaCard">
+        <div class="ctaLeft">
+          <h3 style="margin:0 0 8px;">Email template</h3>
+          <p class="small" style="margin:0 0 10px;">Send to <b>info@backup-parts.com</b>:</p>
+          <p class="small" style="margin:0;">
+            <b>Failure:</b> extrusion / nibbling (photo attached)<br/>
+            <b>Application:</b> static / dynamic (reciprocating / rotary)<br/>
+            <b>Pressure:</b> normal + any spikes (if known)<br/>
+            <b>Size:</b> ID × CS (or groove width/depth)<br/>
+            <b>Notes:</b> where the gap might be (ports/split line)<br/>
+            <b>Quantity:</b> sample + order volume
+          </p>
+        </div>
+        <div class="ctaRight">
+          <b>What we’ll do</b>
+          <p class="small" style="margin:0 0 10px;">
+            We’ll read the damage pattern and suggest the safest first fix (gap control / back-up ring / sizing confirmation),
+            then quote with clear lead time.
+          </p>
+          <a class="btn" href="../index.html#quote">Request Quotation</a>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Is nibbling always caused by wrong material?</summary>
+          <p>
+            Not necessarily. Nibbling is commonly a mechanical issue: extrusion into a gap under pressure, then tearing.
+            Material choice matters, but gap + pressure spikes are often the first place to look.
+          </p>
+        </details>
+        <details>
+          <summary>What is the fastest “field fix” for extrusion?</summary>
+          <p>
+            If the system allows it, reducing the clearance gap and/or adding a back-up ring is often the fastest practical fix.
+            Also confirm the groove is clean and edges are deburred.
+          </p>
+        </details>
+        <details>
+          <summary>What photos help the most?</summary>
+          <p>
+            A close-up of the damaged edge (both sides), plus a photo of the groove/port area where the ring sits.
+            If you can include a caliper in the frame, even better.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide to O-ring extrusion and nibbling failures.</p>
+    </article>
+
+  </div>
+</body>
+</html>
