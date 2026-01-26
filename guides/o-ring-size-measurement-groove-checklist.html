@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How to Measure an O-Ring (2026): ID, OD, CS + Groove Checklist (No Drawing Needed) | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to measure O-rings without a drawing: ID/OD/CS, how to avoid old-ring measurement traps, groove (gland) width/depth checklist, tolerance notes, and a copy/paste RFQ. Includes FAQ + HowTo schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-size-measurement-groove-checklist.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How to Measure an O-Ring: ID/OD/CS + Groove Checklist (No Drawing Needed)" />
+  <meta property="og:description" content="Practical steps to measure O-rings and glands correctly (and avoid common mistakes). Includes a pin-friendly checklist + RFQ template." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:1080px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar (same family, still lightweight) */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    /* Layout variation: TOC + article */
+    .layout{display:grid; grid-template-columns: 280px 1fr; gap:14px; margin-top:14px;}
+    @media (max-width:980px){ .layout{grid-template-columns:1fr;} }
+
+    .toc{
+      position:sticky; top:14px; align-self:start;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.82);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    @media (max-width:980px){ .toc{position:static;} }
+
+    .toc b{display:block; margin-bottom:10px;}
+    .toc a{
+      display:block; padding:8px 10px; border-radius:12px; font-size:13px; color:#374151;
+      border:1px solid transparent;
+    }
+    .toc a:hover{background:rgba(15,94,168,.08); border-color:rgba(15,94,168,.10); text-decoration:none;}
+    .toc .hint{margin-top:10px; font-size:12px; color:var(--muted); line-height:1.6;}
+
+    .card{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;}
+    @media (max-width:820px){ .grid{grid-template-columns:1fr;} }
+
+    .box{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;
+    }
+    .box h3{margin:0 0 6px; font-size:16px;}
+    .box p{margin:0; color:var(--muted); font-size:13px; line-height:1.6;}
+
+    .check{margin:10px 0 0; padding-left:18px; color:#111827;}
+    .check li{margin:8px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Step cards (layout variation) */
+    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .steps{grid-template-columns:1fr 1fr;} }
+    @media (max-width:520px){ .steps{grid-template-columns:1fr;} }
+    .step{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;
+    }
+    .step .n{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:28px; height:28px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      font-weight:900; color:var(--brand2); font-size:12px;
+      margin-bottom:8px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Table */
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:#fff; margin-top:10px;}
+    th,td{padding:12px 12px; border-bottom:1px solid var(--line); vertical-align:top; font-size:13px; color:#374151;}
+    th{background:rgba(15,94,168,.06); color:#111827; text-align:left; font-weight:900;}
+    tr:last-child td{border-bottom:none;}
+
+    /* Chips */
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+    .chip{
+      font-size:12px; color:#374151;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.9);
+      padding:6px 10px; border-radius:999px;
+    }
+
+    /* CTA split */
+    .ctaCard{display:grid; grid-template-columns:1.1fr .9fr; gap:12px; margin-top:14px;}
+    @media (max-width:820px){ .ctaCard{grid-template-columns:1fr;} }
+    .ctaLeft{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .ctaRight{
+      background:linear-gradient(135deg, rgba(11,58,102,.08), rgba(15,94,168,.10));
+      border:1px solid rgba(15,94,168,.14);
+      border-radius:18px; padding:16px;
+    }
+    .ctaRight b{display:block; margin-bottom:6px;}
+    .small{font-size:12px; color:var(--muted); line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+    code{background:rgba(17,24,39,.05); padding:2px 6px; border-radius:8px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"How to Measure an O-Ring (2026): ID, OD, CS + Groove Checklist (No Drawing Needed)",
+    "description":"AI-friendly guide to measure O-rings without a drawing: ID/OD/CS, groove width/depth checklist, tolerance notes, and a copy/paste RFQ template.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-size-measurement-groove-checklist.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Measure an O-ring without a drawing (ID × CS) and confirm the groove",
+    "description":"A quick method to measure O-rings and avoid common measurement traps using calipers and groove checks.",
+    "totalTime":"PT6M",
+    "step":[
+      {"@type":"HowToStep","name":"Classify the seal type","text":"Confirm it is an O-ring (circular cross section) and note static vs dynamic use."},
+      {"@type":"HowToStep","name":"Measure ID and CS (preferred)","text":"Measure inner diameter (ID) and cross section (CS). If only OD is available, measure OD and CS, then derive ID if needed."},
+      {"@type":"HowToStep","name":"Avoid old-ring traps","text":"Old rings may be stretched/flattened. If the ring is glossy/flat, measure the groove (gland) instead."},
+      {"@type":"HowToStep","name":"Check groove width and depth","text":"Measure groove width and depth to confirm squeeze and to reduce leakage risk."},
+      {"@type":"HowToStep","name":"Share medium and temperature","text":"Material selection depends on working fluid and min/max temperature. Send medium + temperature range for a safe recommendation."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the best way to specify an O-ring size?","acceptedAnswer":{"@type":"Answer","text":"The best specification is ID × CS (inner diameter × cross section). It is more reliable than OD alone and is widely used in DIN/ISO/AS standards."}},
+      {"@type":"Question","name":"Why is measuring the old O-ring often wrong?","acceptedAnswer":{"@type":"Answer","text":"Old O-rings can be stretched, swollen, or flattened from compression set. Measuring the groove (gland) can be more accurate than measuring a deformed ring."}},
+      {"@type":"Question","name":"What minimum info is needed for a fast quote?","acceptedAnswer":{"@type":"Answer","text":"ID × CS (or OD/ID/CS), material requirement (or medium + temperature range), application type (static/dynamic), quantity, and photos if available."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <div class="layout">
+
+      <!-- TOC (layout variation) -->
+      <aside class="toc" aria-label="Table of contents">
+        <b>On this page</b>
+        <a href="#quick">6-minute quick method</a>
+        <a href="#idcs">Measure ID × CS</a>
+        <a href="#oldring">Old ring traps</a>
+        <a href="#groove">Groove (gland) checklist</a>
+        <a href="#tolerance">Tolerance notes</a>
+        <a href="#pin">Pinterest-ready checklist</a>
+        <a href="#rfq">Copy/paste RFQ</a>
+        <a href="#faq">FAQ</a>
+        <div class="hint">
+          If you only have a worn sample, send a photo next to a caliper + medium/temp.
+          We can recommend a safe compound and confirm critical sizes.
+        </div>
+      </aside>
+
+      <!-- Article -->
+      <article class="card">
+        <div class="kicker">Measurement Guide</div>
+        <h1>How to Measure an O-Ring (2026): ID, OD, CS + Groove Checklist (No Drawing Needed)</h1>
+        <p class="sub">
+          Most “wrong O-ring” problems happen because a worn ring was measured directly.
+          This page shows a simple method to measure <b>ID × CS</b> correctly, when to measure the <b>groove (gland)</b> instead,
+          and what info makes quoting fast and accurate.
+        </p>
+        <div class="meta">
+          <span>Updated: 2026</span>
+          <span>For: hydraulic maintenance, pumps/valves, industrial sealing</span>
+          <span>Output: ID×CS + groove notes + RFQ template</span>
+        </div>
+
+        <div id="quick" class="hr"></div>
+
+        <h2>6-minute quick method</h2>
+        <p class="sub">
+          If you only have calipers and a worn ring, this sequence reduces mistakes:
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <b>Confirm use</b>
+            <p>Static or dynamic? Oil/water/gas? This affects material and hardness.</p>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <b>Measure CS</b>
+            <p>Measure cross section (thickness). Take 3 points and note the largest.</p>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <b>Measure ID</b>
+            <p>Measure inner diameter (ID). If the ring is stretched, measure the groove instead.</p>
+          </div>
+          <div class="step">
+            <div class="n">4</div>
+            <b>Check groove</b>
+            <p>Groove width/depth + scratches/burrs often decide leaks more than “quality”.</p>
+          </div>
+        </div>
+
+        <div class="note" style="margin-top:12px;">
+          <b>Rule of thumb:</b> If the old ring looks <i>flat</i>, <i>glossy</i>, <i>swollen</i>, or <i>soft</i>,
+          don’t trust its dimensions. Use groove measurements + photos.
+        </div>
+
+        <div id="idcs" class="hr"></div>
+
+        <h2>1) Measure ID × CS (preferred standard format)</h2>
+        <p class="sub">
+          The most reliable purchase spec is <b>ID (inner diameter)</b> × <b>CS (cross section)</b>.
+          If you only know OD, you can still work, but ID×CS is the cleanest for DIN/ISO/AS sizes.
+        </p>
+
+        <div class="grid">
+          <div class="box">
+            <h3>What to send a supplier</h3>
+            <ul class="check">
+              <li><b>ID × CS</b> (preferred)</li>
+              <li>Or <b>OD × CS</b> if ID cannot be measured</li>
+              <li>Static vs dynamic (reciprocating / rotary)</li>
+              <li>Medium + min/max temperature</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Common measurement mistakes</h3>
+            <ul class="check">
+              <li>Measuring a stretched ring (ID becomes bigger)</li>
+              <li>Measuring a flattened CS (CS becomes smaller)</li>
+              <li>Not checking groove damage (burrs = micro leaks)</li>
+              <li>Ignoring medium/temp (wrong compound swells or hardens)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="chips" aria-label="Keywords for internal search / pin overlays">
+          <span class="chip">ID × CS</span>
+          <span class="chip">DIN / ISO / AS</span>
+          <span class="chip">Groove (gland)</span>
+          <span class="chip">Compression set</span>
+          <span class="chip">Leak after replacement</span>
+        </div>
+
+        <div id="oldring" class="hr"></div>
+
+        <h2>2) Old ring traps: when measuring the ring is wrong</h2>
+        <p class="sub">
+          A used ring is often a <b>distorted sample</b>. These are the classic traps:
+        </p>
+
+        <table aria-label="Old ring traps table">
+          <thead>
+            <tr>
+              <th>What you see</th>
+              <th>What it means</th>
+              <th>What to do instead</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ring looks flat / glossy</td>
+              <td>Compression set (permanent deformation)</td>
+              <td>Measure groove depth/width; specify medium + temperature</td>
+            </tr>
+            <tr>
+              <td>Ring feels soft / swollen</td>
+              <td>Chemical incompatibility (wrong material)</td>
+              <td>Don’t trust size; confirm medium + temp; choose correct compound</td>
+            </tr>
+            <tr>
+              <td>ID seems “too big”</td>
+              <td>Ring stretched during removal/installation</td>
+              <td>Use groove diameter or original standard size list if available</td>
+            </tr>
+            <tr>
+              <td>Edges torn / chewed</td>
+              <td>Extrusion / nibbling in clearance gap</td>
+              <td>Check pressure/clearance; consider back-up ring + hardness</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="groove" class="hr"></div>
+
+        <h2>3) Groove (gland) checklist: what to check before blaming the O-ring</h2>
+        <p class="sub">
+          Many leaks return because the groove is damaged or mismatched. Even with perfect rings, a burr can cut the seal during assembly.
+        </p>
+
+        <div class="grid">
+          <div class="box">
+            <h3>Measure (if possible)</h3>
+            <ul class="check">
+              <li>Groove <b>width</b></li>
+              <li>Groove <b>depth</b></li>
+              <li>Any clearance gap (extrusion risk)</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Inspect (always)</h3>
+            <ul class="check">
+              <li>Micro-scratches inside the groove</li>
+              <li>Sharp edges / burrs at entry</li>
+              <li>Contamination (chips, dust)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          <b>Maintenance tip:</b> If the leak is “not every time”, treat it as a groove/assembly variability problem.
+          Clean + deburr + verify groove dimensions before changing suppliers.
+        </div>
+
+        <div id="tolerance" class="hr"></div>
+
+        <h2>4) Tolerance notes (buyers care about this)</h2>
+        <p class="sub">
+          If your application is sensitive (leak = downtime), tell the supplier that you need tighter control on critical dimensions.
+          You don’t need to be a sealing designer — just communicate the risk level.
+        </p>
+
+        <div class="grid">
+          <div class="box">
+            <h3>When standard tolerance is usually fine</h3>
+            <ul class="check">
+              <li>General maintenance replacement</li>
+              <li>Low pressure static seals</li>
+              <li>Non-critical leakage risk</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>When you should ask for tighter control</h3>
+            <ul class="check">
+              <li>High pressure (extrusion risk)</li>
+              <li>Precision grooves / sensitive equipment</li>
+              <li>Downtime cost is high</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="pin" class="hr"></div>
+
+        <h2>Pinterest-ready checklist (copy into a Pin image)</h2>
+        <p class="sub">
+          If you’re making a Pin, this is the “save-worthy” structure that solves a real problem:
+        </p>
+
+        <div class="box">
+          <h3 style="margin:0 0 6px;">O-Ring Size in 60 Seconds</h3>
+          <ul class="check">
+            <li><b>Measure CS</b> (3 points; note the largest)</li>
+            <li><b>Measure ID</b> (avoid stretched rings)</li>
+            <li>If ring is flat/swollen → <b>measure groove</b> instead</li>
+            <li>Always add: <b>medium + min/max temperature</b></li>
+            <li>Leak keeps coming back → inspect <b>burrs/scratches</b> in groove</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">ID × CS</span>
+            <span class="chip">Groove width/depth</span>
+            <span class="chip">Medium + Temp</span>
+            <span class="chip">Leak after replacement</span>
+          </div>
+        </div>
+
+        <div id="rfq" class="hr"></div>
+
+        <h2>Copy/paste RFQ (fast quote in 24–48h)</h2>
+        <div class="ctaCard">
+          <div class="ctaLeft">
+            <h3 style="margin:0 0 8px;">Email template</h3>
+            <p class="small" style="margin:0 0 10px;">Copy/paste this to <b>info@backup-parts.com</b>:</p>
+            <p class="small" style="margin:0;">
+              <b>Size:</b> ID × CS (or OD/ID/CS)<br/>
+              <b>Application:</b> static / dynamic (reciprocating / rotary)<br/>
+              <b>Medium:</b> oil / fuel / water / steam / gas (type)<br/>
+              <b>Temperature:</b> min/max °C<br/>
+              <b>Pressure:</b> (if known)<br/>
+              <b>Quantity:</b> sample + order qty<br/>
+              <b>Groove:</b> width/depth (if available) + photos<br/>
+              <b>Notes:</b> leak symptom / failure photo (optional)
+            </p>
+          </div>
+
+          <div class="ctaRight">
+            <b>Need a quick recommendation?</b>
+            <p class="small" style="margin:0 0 10px;">
+              If you send the ring photo + medium/temp, we can recommend a safe compound option and confirm sizing quickly.
+            </p>
+            <p class="small" style="margin:0;">
+              Email: <b>info@backup-parts.com</b><br/>
+              Or use the quote form on the homepage.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn" href="../index.html#quote">Request Quotation</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="faq" class="hr"></div>
+
+        <h2>FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Should I measure ID × CS or OD × CS?</summary>
+            <p>
+              Prefer <b>ID × CS</b>. It maps cleanly to standard sizing and reduces confusion. If ID is hard to measure (stretched ring),
+              send OD × CS plus groove measurements and a photo next to a caliper.
+            </p>
+          </details>
+
+          <details>
+            <summary>My replacement leaks even though the size matches—why?</summary>
+            <p>
+              Common causes are groove scratches/burrs, assembly twist, contamination, or material mismatch to the medium/temperature.
+              Inspect the groove and confirm compound selection before changing brand.
+            </p>
+          </details>
+
+          <details>
+            <summary>What makes quoting faster?</summary>
+            <p>
+              ID × CS + medium + temperature + static/dynamic + quantity. Photos of the ring and groove reduce back-and-forth the most.
+            </p>
+          </details>
+        </div>
+
+        <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly O-ring measurement guide for industrial maintenance teams.</p>
+      </article>
+
+    </div>
+  </div>
+</body>
+</html>
