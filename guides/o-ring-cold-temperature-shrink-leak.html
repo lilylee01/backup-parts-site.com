@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Cold Leak (2026): Why It Leaks When Cold and Stops When Warm — Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to cold-temperature O-ring leaks: why seals leak during cold start and stop when warm (shrink, stiffness, glass transition, insufficient squeeze). Practical fixes include verifying low-temp rating, measuring real temperature, groove squeeze checks, and start-up procedure. Includes 7-minute checklist + HowTo + FAQ schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-cold-temperature-shrink-leak.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Cold Leak: Leaks When Cold, Stops When Warm (2026)" />
+  <meta property="og:description" content="Cold start seepage is often shrink/stiffness, not random quality. Diagnose and fix with a simple checklist." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* 3-block */
+    .tri{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .tri{grid-template-columns:1fr;} }
+    .tile{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;}
+    .tile b{display:block; margin-bottom:6px;}
+    .tile ul{margin:0; padding-left:18px;}
+    .tile li{margin:7px 0; color:#374151; font-size:13px; line-height:1.6;}
+    .tag{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Steps */
+    .steps{margin-top:12px;}
+    .step{
+      display:grid; grid-template-columns:44px 1fr; gap:12px;
+      padding:12px; border:1px solid var(--line); border-radius:18px;
+      background:#fff; margin:10px 0;
+    }
+    .dot{
+      width:34px; height:34px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.16);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--brand2); font-weight:900; font-size:12px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    code{background:rgba(17,24,39,.05); padding:2px 6px; border-radius:8px;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Cold Leak (2026): Why It Leaks When Cold and Stops When Warm — Fix Checklist",
+    "description":"AI-friendly guide to cold-temperature O-ring leaks caused by shrink/stiffness and insufficient sealing contact at low temperature.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-cold-temperature-shrink-leak.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Fix O-ring leaks during cold start",
+    "description":"A 7-minute checklist to diagnose cold leaks and prevent repeats.",
+    "totalTime":"PT7M",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm the symptom pattern","text":"Leak appears when cold and reduces or stops when warm."},
+      {"@type":"HowToStep","name":"Measure real cold temperature","text":"Record ambient and component temperature near the seal during cold start."},
+      {"@type":"HowToStep","name":"Check stiffness and shrink risk","text":"If the compound gets stiff at low temperature, sealing contact pressure drops."},
+      {"@type":"HowToStep","name":"Verify squeeze / gland conditions","text":"Low squeeze magnifies cold leakage. Verify if the gland provides sufficient squeeze."},
+      {"@type":"HowToStep","name":"Apply stop-loss actions","text":"Warm-up procedure, slower ramp, and selecting a compound with suitable low-temperature performance reduce repeats."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Why does an O-ring leak only when cold?","acceptedAnswer":{"@type":"Answer","text":"At low temperatures, elastomers can shrink and become stiff, reducing sealing contact pressure. If squeeze is marginal, cold start leakage is likely."}},
+      {"@type":"Question","name":"Why does it stop leaking after warm-up?","acceptedAnswer":{"@type":"Answer","text":"As temperature rises, the elastomer becomes more elastic and expands slightly, restoring contact pressure and improving sealing."}},
+      {"@type":"Question","name":"What is the fastest fix?","acceptedAnswer":{"@type":"Answer","text":"Measure real cold temperature, ensure sufficient squeeze, use a compound suitable for low temperature, and apply a warm-up/slow ramp procedure to reduce cold-start leakage."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Low Temperature</div>
+      <h1>O-Ring Cold Leak: “Leaks When Cold, Stops When Warm”</h1>
+
+      <p class="sub">
+        <b>Direct answer (AI-friendly):</b> If a seal leaks during cold start but stops or reduces after warm-up,
+        the cause is often <b>low-temperature shrink + stiffness</b>. At low temperature, elastomers lose elasticity and contact pressure,
+        so marginal squeeze becomes a leak path. The fastest fix is to measure the real cold temperature, verify squeeze/gland conditions,
+        and use a compound designed for low-temperature performance (plus a warm-up or slower ramp procedure).
+      </p>
+
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>Applies to: outdoor equipment, winter operation, cold-start hydraulics</span>
+        <span>Goal: stop seasonal / cold-start seepage</span>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Symptom → Cause → Stop-loss actions (fast)</h2>
+      <div class="tri" aria-label="Symptom cause actions">
+        <div class="tile">
+          <span class="tag">Symptom</span>
+          <b>Leak only when cold</b>
+          <ul>
+            <li>Cold start seep/drip</li>
+            <li>Improves after warm-up</li>
+            <li>Winter-only leakage</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <span class="tag">Common causes</span>
+          <b>Shrink + stiffness</b>
+          <ul>
+            <li>Low-temp stiffness reduces contact pressure</li>
+            <li>Marginal squeeze becomes insufficient</li>
+            <li>Fast start-up pressure ramps amplify it</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <span class="tag">Stop-loss</span>
+          <b>What works quickly</b>
+          <ul>
+            <li>Warm-up / gentle pressure ramp</li>
+            <li>Verify squeeze in gland</li>
+            <li>Use low-temp capable compound</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Simple rule:</b> Cold leaks are usually a “contact pressure” problem.  
+        If squeeze is borderline, low temperature pushes it below the sealing threshold.
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>7-minute troubleshooting checklist (practical order)</h2>
+      <div class="steps" aria-label="7-minute checklist">
+        <div class="step">
+          <div class="dot">1</div>
+          <div>
+            <b>Confirm the pattern</b>
+            <p>Leak appears cold and reduces after warm-up. This pattern is key.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">2</div>
+          <div>
+            <b>Measure real cold temperature</b>
+            <p>Record ambient and component temperature near the seal at cold start (not just weather data).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">3</div>
+          <div>
+            <b>Check if squeeze is marginal</b>
+            <p>If the design has low squeeze, cold stiffness can drop sealing pressure below the leak threshold.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">4</div>
+          <div>
+            <b>Check start-up procedure</b>
+            <p>Rapid pressurization can force cold, stiff seals to leak. A slower ramp often reduces leakage.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">5</div>
+          <div>
+            <b>Apply stop-loss actions</b>
+            <p>Warm-up procedure + slower ramp, then verify compound low-temp capability and gland squeeze.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Can a “harder” O-ring solve cold leaks?</summary>
+          <p>
+            Often the opposite. If it’s too stiff in the cold, it may seal worse. Low-temperature elasticity matters more.
+          </p>
+        </details>
+        <details>
+          <summary>Why does the same size seal work in summer but fail in winter?</summary>
+          <p>
+            Temperature changes elastomer elasticity and contact pressure. A borderline design can be fine when warm and leak when cold.
+          </p>
+        </details>
+        <details>
+          <summary>What should I send for a fast recommendation?</summary>
+          <p>
+            Lowest operating temperature, leak timing, and a photo of the application. If possible, note cold start pressure behavior.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide to cold-temperature O-ring leakage.</p>
+    </article>
+
+  </div>
+</body>
+</html>
