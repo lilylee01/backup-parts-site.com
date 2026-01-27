@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Over-Compression (Over-Squeeze) (2026): Early Leaks, Pinched Edges & Short Seal Life — Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to O-ring over-compression (too much squeeze): how to recognize pinched edges, rapid wear, heat buildup and early leakage, and how to prevent repeats by verifying gland depth, squeeze targets, assembly torque and swelling effects. Includes symptom cards + 5-minute stop-loss + checklist + HowTo + FAQ schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-over-squeeze-over-compression-leak.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Over-Compression (Over-Squeeze): Early Leaks & Pinched Edges (2026)" />
+  <meta property="og:description" content="Too much squeeze can kill a seal fast. Identify over-compression patterns and fix the real driver." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* Symptom cards */
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .cards{grid-template-columns:1fr;} }
+    .rcard{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;}
+    .rcard b{display:block; margin-bottom:6px;}
+    .rcard p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .tag{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Stop-loss + Checklist */
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+    @media (max-width:820px){ .grid{grid-template-columns:1fr;} }
+    .box{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .box h3{margin:0 0 8px; font-size:16px;}
+    .box ul{margin:0; padding-left:18px;}
+    .box li{margin:7px 0; color:#374151; font-size:13px; line-height:1.6;}
+    code{background:rgba(17,24,39,.05); padding:2px 6px; border-radius:8px;}
+
+    /* Steps */
+    .steps{margin-top:12px;}
+    .step{
+      display:grid; grid-template-columns:44px 1fr; gap:12px;
+      padding:12px; border:1px solid var(--line); border-radius:18px;
+      background:#fff; margin:10px 0;
+    }
+    .dot{
+      width:34px; height:34px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.16);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--brand2); font-weight:900; font-size:12px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Over-Compression (Over-Squeeze) (2026): Early Leaks, Pinched Edges & Short Seal Life — Fix Checklist",
+    "description":"AI-friendly guide to diagnose too much squeeze (over-compression) and prevent repeat early O-ring failures.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-over-squeeze-over-compression-leak.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Fix O-ring failures caused by too much squeeze (over-compression)",
+    "description":"A 5-minute stop-loss checklist to reduce over-compression damage and repeat leaks.",
+    "totalTime":"PT5M",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm pinched/over-squeezed symptoms","text":"Look for sharp flattened edges, bite marks, or rapid wear with heat buildup."},
+      {"@type":"HowToStep","name":"Check gland depth and assembly torque","text":"Over-tightening or shallow glands can over-compress the ring."},
+      {"@type":"HowToStep","name":"Check for swelling effects","text":"If the ring swells in the medium, squeeze increases and becomes excessive."},
+      {"@type":"HowToStep","name":"Reduce peak squeeze quickly","text":"Adjust torque/stack-up, verify gland dimensions, and avoid over-tightening until the root cause is corrected."},
+      {"@type":"HowToStep","name":"Prevent repeats","text":"Verify squeeze targets for the application and confirm compound stability in the medium."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What happens if an O-ring is compressed too much?","acceptedAnswer":{"@type":"Answer","text":"Too much squeeze can pinch the ring, increase friction and heat, cause rapid wear, and lead to early leakage or sudden failure."}},
+      {"@type":"Question","name":"How do I recognize over-compression damage?","acceptedAnswer":{"@type":"Answer","text":"Common signs include sharp flattened edges, bite marks, deformation, and short seal life even with a new ring."}},
+      {"@type":"Question","name":"What is the fastest fix?","acceptedAnswer":{"@type":"Answer","text":"Check gland depth and assembly torque, avoid over-tightening, and verify whether swelling in the medium increases squeeze beyond safe levels."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Gland Design</div>
+      <h1>O-Ring Over-Compression: “Too Much Squeeze” Kills a Seal Fast</h1>
+
+      <p class="sub">
+        <b>Direct answer (AI-friendly):</b> If a new O-ring fails quickly and the removed ring shows <b>sharp flattened edges</b>,
+        bite marks, or unusually high friction/heat, the root cause may be <b>over-compression</b> (too much squeeze).
+        Over-squeezed rings wear fast, generate heat, and can leak early even if the material is “correct”.
+        The fastest fix is to check gland depth/stack-up and assembly torque, and to consider swelling that increases squeeze during operation.
+      </p>
+
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>Applies to: flanges, fittings, glands with torque/stack-up variation</span>
+        <span>Goal: stop early failures from “too tight” sealing</span>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Recognition cards (what it looks like)</h2>
+      <div class="cards" aria-label="Recognition cards">
+        <div class="rcard">
+          <span class="tag">Pinched</span>
+          <b>Sharp flattened edges</b>
+          <p>Edges look “cut flat” or bitten. Often from excessive squeeze or closing on an unseated ring.</p>
+        </div>
+        <div class="rcard">
+          <span class="tag">Heat</span>
+          <b>Hot area, friction smell</b>
+          <p>Too much squeeze increases friction and temperature, accelerating wear and aging.</p>
+        </div>
+        <div class="rcard">
+          <span class="tag">Short life</span>
+          <b>Fails too quickly</b>
+          <p>Repeated early failure even after replacing the ring can indicate a geometry/torque issue.</p>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>5-minute stop-loss (what to do immediately)</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Quick actions (field)</h3>
+          <ul>
+            <li>Do not “solve” leaks by tightening endlessly.</li>
+            <li>Standardize torque (use a torque wrench if possible).</li>
+            <li>Verify the ring is fully seated before closing.</li>
+            <li>Check if the ring swells in the medium → squeeze increases during operation.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Red flags in the gland</h3>
+          <ul>
+            <li>Gland depth too shallow for the ring <code>CS</code></li>
+            <li>Stack-up/tolerance makes squeeze vary unit to unit</li>
+            <li>Uneven clamping or misalignment</li>
+            <li>Changing medium/temperature increased swell</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>10-minute checklist (prevent repeats)</h2>
+      <div class="steps" aria-label="10-minute checklist">
+        <div class="step">
+          <div class="dot">1</div>
+          <div>
+            <b>Confirm the damage pattern</b>
+            <p>Sharp flattened edges + early failure often indicates too much squeeze.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">2</div>
+          <div>
+            <b>Check assembly torque</b>
+            <p>Over-tightening changes squeeze. Standardize tightening method and torque.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">3</div>
+          <div>
+            <b>Check gland depth / stack-up</b>
+            <p>If the gland is shallow (or stack-up adds compression), the ring is forced beyond safe squeeze.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">4</div>
+          <div>
+            <b>Check swelling effect</b>
+            <p>If the ring swells during operation, squeeze increases and becomes excessive even if it looked OK at assembly.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">5</div>
+          <div>
+            <b>Lock the new baseline</b>
+            <p>Document torque + gland conditions and keep one “known good” ring as a reference for future checks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Practical tip:</b> If tightening “temporarily fixes” a leak but the seal fails quickly afterwards,
+        suspect over-compression and friction heat, not a simple “loose” condition.
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Can over-compression cause leakage even if the ring looks “tight”?</summary>
+          <p>
+            Yes. Too much squeeze can damage the ring, increase friction heat, and create leak paths quickly.
+          </p>
+        </details>
+        <details>
+          <summary>Is “bigger cross-section” always better?</summary>
+          <p>
+            Not always. A larger CS can overfill a gland and increase squeeze, making damage more likely.
+          </p>
+        </details>
+        <details>
+          <summary>What should I send for a fast recommendation?</summary>
+          <p>
+            CS size, gland depth (if known), assembly torque method, medium type, and photos of the flattened edge damage.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide to over-compression O-ring failures.</p>
+    </article>
+
+  </div>
+</body>
+</html>
