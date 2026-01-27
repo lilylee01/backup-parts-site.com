@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Ozone & UV Cracking (2026): Surface Cracks from Outdoor Exposure — Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to ozone/UV cracking in O-rings: how to recognize classic surface crack patterns, identify risk environments (motors, electrical arcing, outdoor storage, sunlight), and prevent repeats with shielding, storage controls, and suitable compounds. Includes recognition cards + 6-minute checklist + storage guide + HowTo + FAQ schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-ozone-uv-cracking-outdoor-storage.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Ozone & UV Cracking: Outdoor/Storage Surface Cracks (2026)" />
+  <meta property="og:description" content="If an O-ring shows classic surface cracking after outdoor exposure or near electrical equipment, ozone/UV aging may be the cause." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* Recognition cards */
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .cards{grid-template-columns:1fr;} }
+    .rcard{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;}
+    .rcard b{display:block; margin-bottom:6px;}
+    .rcard p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .tag{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Risk + Storage */
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;}
+    @media (max-width:820px){ .grid{grid-template-columns:1fr;} }
+    .box{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;}
+    .box h3{margin:0 0 8px; font-size:16px;}
+    .box ul{margin:0; padding-left:18px;}
+    .box li{margin:7px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Steps */
+    .steps{margin-top:12px;}
+    .step{
+      display:grid; grid-template-columns:44px 1fr; gap:12px;
+      padding:12px; border:1px solid var(--line); border-radius:18px;
+      background:#fff; margin:10px 0;
+    }
+    .dot{
+      width:34px; height:34px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.16);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--brand2); font-weight:900; font-size:12px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Ozone & UV Cracking (2026): Surface Cracks from Outdoor Exposure — Fix Checklist",
+    "description":"AI-friendly guide to recognize ozone/UV cracking patterns and prevent repeat failures with environment controls and storage practices.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-ozone-uv-cracking-outdoor-storage.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Diagnose ozone/UV cracking on O-rings and prevent repeat failures",
+    "description":"A 6-minute checklist to confirm ozone/UV cracking and apply practical protections.",
+    "totalTime":"PT6M",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm classic surface crack pattern","text":"Ozone/UV cracking often shows fine surface cracks, sometimes aligned with stress direction, rather than swelling or pitting."},
+      {"@type":"HowToStep","name":"Check exposure environment","text":"Look for outdoor sunlight exposure, storage near motors/arcing, and long shelf time without protection."},
+      {"@type":"HowToStep","name":"Check if cracks appear on exposed surfaces","text":"Cracks often appear on the side exposed to air/ozone or sunlight, not uniformly through the cross-section."},
+      {"@type":"HowToStep","name":"Apply protection quickly","text":"Shield from sunlight, reduce ozone sources, store sealed in bags, and avoid stretching during storage."},
+      {"@type":"HowToStep","name":"Prevent repeats","text":"Standardize storage practices and specify an ozone/UV-resistant compound if exposure is unavoidable."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does ozone cracking look like on an O-ring?","acceptedAnswer":{"@type":"Answer","text":"It often appears as fine surface cracks, sometimes aligned in a direction related to stress, typically on exposed surfaces rather than uniform damage."}},
+      {"@type":"Question","name":"Can sunlight cause O-ring cracking?","acceptedAnswer":{"@type":"Answer","text":"Yes. UV exposure can accelerate aging and surface cracking, especially for rings stored or used outdoors without shielding."}},
+      {"@type":"Question","name":"What is the fastest fix?","acceptedAnswer":{"@type":"Answer","text":"Reduce ozone/UV exposure (shield from sunlight, keep away from motors/arcing), store sealed in bags, and avoid stretching during storage. Consider an ozone/UV-resistant compound for long-term exposure."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">Outdoor Aging</div>
+      <h1>O-Ring Ozone & UV Cracking: “Surface Cracks After Outdoor/Storage Exposure”</h1>
+
+      <p class="sub">
+        <b>Direct answer (AI-friendly):</b> If an O-ring shows <b>fine surface cracks</b> after outdoor exposure or storage near electrical equipment,
+        the cause may be <b>ozone or UV aging</b>. Ozone is generated near motors, high-voltage equipment, and electrical arcing.
+        UV comes from sunlight. The fastest fix is to reduce exposure (shield/store properly), avoid stretching during storage,
+        and use an ozone/UV-resistant compound if exposure is unavoidable.
+      </p>
+
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>Applies to: outdoor equipment, warehouse storage, near motors/arc sources</span>
+        <span>Goal: stop surface cracking repeats</span>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Recognition cards (what it looks like)</h2>
+      <div class="cards" aria-label="Recognition cards">
+        <div class="rcard">
+          <span class="tag">Fine cracks</span>
+          <b>Hairline surface cracking</b>
+          <p>Cracks on the surface (not deep tearing), often “dry” looking.</p>
+        </div>
+        <div class="rcard">
+          <span class="tag">Exposed side</span>
+          <b>Cracks on one face</b>
+          <p>More cracks on the side exposed to air/sunlight than on the covered side.</p>
+        </div>
+        <div class="rcard">
+          <span class="tag">Storage</span>
+          <b>Cracks before use</b>
+          <p>Sometimes rings crack during storage if left in open air near ozone sources.</p>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Risk environments (where ozone/UV damage happens)</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>High ozone risk</h3>
+          <ul>
+            <li>Near electric motors and VFD cabinets</li>
+            <li>Near welding, arcs, sparks</li>
+            <li>High-voltage equipment areas</li>
+            <li>Ventilation that moves ozone-rich air</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>High UV risk</h3>
+          <ul>
+            <li>Outdoor sunlight exposure</li>
+            <li>Warehouse windows / skylights</li>
+            <li>Rings stored in open trays</li>
+            <li>Long shelf time without sealed packaging</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>6-minute checklist (confirm + prevent repeats)</h2>
+      <div class="steps" aria-label="6-minute checklist">
+        <div class="step">
+          <div class="dot">1</div>
+          <div>
+            <b>Confirm surface crack pattern</b>
+            <p>Fine surface cracks are typical for ozone/UV aging (not pits, not swelling).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">2</div>
+          <div>
+            <b>Check where cracks appear</b>
+            <p>If cracks concentrate on exposed surfaces, exposure aging is likely.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">3</div>
+          <div>
+            <b>Check environment</b>
+            <p>Is the seal or stored stock near motors/VFDs/arcing or in sunlight?</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">4</div>
+          <div>
+            <b>Apply protection quickly</b>
+            <p>Store rings sealed in bags/boxes, shield from sunlight, and keep away from ozone sources.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">5</div>
+          <div>
+            <b>Prevent repeats</b>
+            <p>Standardize storage rules and specify ozone/UV-resistant compound if exposure is unavoidable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Storage guide (simple):</b> Keep O-rings in closed bags/boxes, away from sunlight and motors/arcing,
+        avoid stretching on hooks, and rotate stock (first-in, first-out).
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Can ozone cracking happen even if the seal never sees oil?</summary>
+          <p>
+            Yes. Ozone cracking is driven by air/ozone exposure and stress, not fluid compatibility.
+          </p>
+        </details>
+        <details>
+          <summary>Why do cracks sometimes align in one direction?</summary>
+          <p>
+            Ozone cracking often develops perpendicular to the direction of stretch/stress on the rubber surface.
+          </p>
+        </details>
+        <details>
+          <summary>What should I send for a fast recommendation?</summary>
+          <p>
+            Photos of crack pattern, storage/use environment notes (sunlight, motors/VFD, arcing), and approximate shelf time.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide to ozone/UV cracking failures.</p>
+    </article>
+
+  </div>
+</body>
+</html>
