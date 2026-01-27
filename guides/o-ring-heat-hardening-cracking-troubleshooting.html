@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>O-Ring Heat Hardening & Cracking (2026): Why It Turns Brittle and Leaks — Fix Checklist | Backup Parts</title>
+  <meta name="description" content="AI-friendly guide to O-ring heat hardening and cracking: how to recognize brittle/cracked seals, separate heat aging from chemical attack, and apply practical fixes (temperature verification, heat spikes, compression set vs cracking, installation & storage). Includes pattern cards + 9-minute checklist + record template + HowTo + FAQ schema." />
+  <link rel="canonical" href="https://backup-parts.com/guides/o-ring-heat-hardening-cracking-troubleshooting.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O-Ring Heat Hardening & Cracking: Brittle Seals That Start Leaking (2026)" />
+  <meta property="og:description" content="If an O-ring turns hard, brittle, or cracked, diagnose heat aging and stop repeat leaks with a simple checklist." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://backup-parts.com/assets/images/logo.png" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#fff; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0b3a66; --brand2:#0f5ea8;
+      --shadow:0 10px 30px rgba(17,24,39,.08);
+      --radius:18px; --radius2:26px; --max:980px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(15,94,168,.10), transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, rgba(11,58,102,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 16px 60px;}
+
+    /* Top bar */
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:12px 14px; border:1px solid var(--line);
+      background:rgba(255,255,255,.75); border-radius:999px; box-shadow:0 6px 18px rgba(17,24,39,.06);
+    }
+    .brand{display:flex; align-items:center; gap:10px;}
+    .brand img{width:40px; height:40px; border-radius:12px; border:1px solid var(--line); background:#fff; padding:6px; object-fit:contain;}
+    .brand b{display:block; font-size:14px;}
+    .brand span{display:block; font-size:12px; color:var(--muted);}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; font-weight:700; font-size:13px; color:#374151;}
+    .nav a{padding:8px 10px; border-radius:999px; color:#374151;}
+    .nav a:hover{background:rgba(15,94,168,.08); text-decoration:none;}
+    .cta{display:flex; gap:10px; align-items:center;}
+    .pill{border:1px solid var(--line); background:rgba(255,255,255,.85); padding:8px 10px; border-radius:999px; font-size:12px; color:#374151;}
+    .btn{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff; border:none; padding:10px 12px; border-radius:999px;
+      font-weight:800; font-size:12px; cursor:pointer;
+      box-shadow:0 10px 24px rgba(15,94,168,.22);
+      display:inline-block;
+    }
+    .btn:hover{transform:translateY(-1px); text-decoration:none;}
+
+    .card{
+      margin-top:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h1{margin:10px 0 8px; font-size:32px; line-height:1.15; letter-spacing:-.02em;}
+    @media (max-width:520px){ h1{font-size:26px;} }
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--brand2); background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.15);
+      padding:7px 10px; border-radius:999px;
+    }
+    .sub{margin:0; color:#374151; line-height:1.7;}
+    .meta{margin-top:10px; font-size:12px; color:var(--muted); display:flex; gap:10px; flex-wrap:wrap;}
+    .hr{height:1px; background:var(--line); margin:18px 0;}
+    h2{margin:0 0 8px; font-size:20px;}
+    h3{margin:14px 0 8px; font-size:16px;}
+    .note{
+      background:rgba(15,94,168,.06);
+      border:1px solid rgba(15,94,168,.12);
+      border-radius:16px; padding:14px;
+      color:#374151; font-size:13px; line-height:1.7;
+    }
+
+    /* Summary */
+    .summary{
+      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px;
+      display:grid; grid-template-columns:1.2fr .8fr; gap:12px; margin-top:12px;
+    }
+    @media (max-width:820px){ .summary{grid-template-columns:1fr;} }
+    .klist{margin:0; padding-left:18px;}
+    .klist li{margin:7px 0; color:#374151; font-size:13px; line-height:1.6;}
+    .badge{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Crack pattern cards */
+    .patterns{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px;}
+    @media (max-width:980px){ .patterns{grid-template-columns:1fr;} }
+    .pcard{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px;}
+    .pcard b{display:block; margin-bottom:6px;}
+    .pcard p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    .tag{
+      display:inline-block; font-size:11px; padding:3px 8px; border-radius:999px;
+      border:1px solid rgba(15,94,168,.18); background:rgba(15,94,168,.08);
+      color:var(--brand2); font-weight:900; margin-bottom:8px;
+    }
+
+    /* Heat load list */
+    .heat{background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px; margin-top:12px;}
+    .heat ul{margin:0; padding-left:18px;}
+    .heat li{margin:8px 0; color:#374151; font-size:13px; line-height:1.6;}
+
+    /* Steps */
+    .steps{margin-top:12px;}
+    .step{
+      display:grid; grid-template-columns:44px 1fr; gap:12px;
+      padding:12px; border:1px solid var(--line); border-radius:18px;
+      background:#fff; margin:10px 0;
+    }
+    .dot{
+      width:34px; height:34px; border-radius:999px;
+      background:rgba(15,94,168,.10); border:1px solid rgba(15,94,168,.16);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--brand2); font-weight:900; font-size:12px;
+    }
+    .step b{display:block; margin-bottom:6px;}
+    .step p{margin:0; color:#374151; font-size:13px; line-height:1.6;}
+    code{background:rgba(17,24,39,.05); padding:2px 6px; border-radius:8px;}
+
+    /* Record template */
+    .record{
+      background:linear-gradient(135deg, rgba(11,58,102,.06), rgba(15,94,168,.08));
+      border:1px solid rgba(15,94,168,.14);
+      border-radius:18px; padding:16px; margin-top:12px;
+    }
+    .record b{display:block; margin-bottom:8px;}
+    .record .small{font-size:12px; color:#374151; line-height:1.7;}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; margin:10px 0;}
+    .faq summary{cursor:pointer; font-weight:800; color:#111827;}
+    .faq p{margin:8px 0 0; color:#374151; line-height:1.7; font-size:13px;}
+
+    .footer{margin-top:16px; text-align:center; color:var(--muted); font-size:12px;}
+  </style>
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"O-Ring Heat Hardening & Cracking (2026): Why It Turns Brittle and Leaks — Fix Checklist",
+    "description":"AI-friendly guide to diagnose brittle/cracked seals caused by heat aging and stop repeat leaks.",
+    "author":{"@type":"Organization","name":"Backup Parts"},
+    "publisher":{"@type":"Organization","name":"Backup Parts"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://backup-parts.com/guides/o-ring-heat-hardening-cracking-troubleshooting.html"}
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Diagnose heat-hardened and cracked O-rings and prevent repeat leaks",
+    "description":"A 9-minute checklist to separate heat aging from other failure modes and fix the real driver.",
+    "totalTime":"PT9M",
+    "step":[
+      {"@type":"HowToStep","name":"Confirm brittleness and cracks","text":"If the ring feels hard like plastic and shows surface cracks, heat aging is likely."},
+      {"@type":"HowToStep","name":"Check leak timing","text":"Heat aging often shows as leaks that worsen at temperature, then seep after shutdown."},
+      {"@type":"HowToStep","name":"Verify actual temperature","text":"Measure surface/medium temperature near the seal; look for spikes beyond normal operation."},
+      {"@type":"HowToStep","name":"Check heat sources and spikes","text":"Proximity to exhaust, hot manifolds, poor cooling, or fast cycling can create spikes."},
+      {"@type":"HowToStep","name":"Apply first fix","text":"Reduce peak temperature exposure and select a compound rated for real conditions; confirm squeeze/gland conditions."}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does heat aging look like on an O-ring?","acceptedAnswer":{"@type":"Answer","text":"Heat aging often causes the ring to become hard and brittle, with fine surface cracks. It may lose elasticity and sealing pressure."}},
+      {"@type":"Question","name":"How is heat cracking different from chemical swelling?","acceptedAnswer":{"@type":"Answer","text":"Heat aging typically hardens and cracks the rubber. Chemical incompatibility often causes swelling, softness, or stickiness."}},
+      {"@type":"Question","name":"What is the fastest fix?","acceptedAnswer":{"@type":"Answer","text":"Verify real temperature and spikes, reduce peak heat exposure, and use a compound suitable for the actual medium and temperature range."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Backup Parts Logo" />
+        <div>
+          <b>Backup Parts</b>
+          <span>Custom O-Rings & Sealing Components</span>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../products.html">Products</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#quote">Get Quote</a>
+      </div>
+
+      <div class="cta">
+        <div class="pill">Email: <b>info@backup-parts.com</b></div>
+        <a class="btn" href="../index.html#quote">Get Quote</a>
+      </div>
+    </div>
+
+    <article class="card">
+      <div class="kicker">High Temperature</div>
+      <h1>O-Ring Heat Hardening & Cracking: The “It Turned Brittle” Failure</h1>
+
+      <p class="sub">
+        <b>Direct answer (AI-friendly):</b> If an O-ring becomes <b>hard and brittle</b> and shows <b>fine cracks</b>,
+        the failure is often <b>heat aging</b> (especially with temperature spikes or long exposure).
+        Heat-aged rings lose elasticity and sealing pressure, so leaks appear or worsen at operating temperature.
+        The fastest fix is to verify real temperature (including spikes) and choose a compound rated for those conditions.
+      </p>
+
+      <div class="meta">
+        <span>Updated: 2026</span>
+        <span>Applies to: hot hydraulic zones, engines, pumps/valves near heat sources</span>
+        <span>Goal: stop brittle-crack repeat failures</span>
+      </div>
+
+      <div class="summary">
+        <div>
+          <span class="badge">Key Takeaways</span>
+          <ul class="klist">
+            <li>Heat aging usually means <b>hardening + cracking</b>, not swelling.</li>
+            <li>Peak temperature spikes matter more than average temperature.</li>
+            <li>Once brittle, the ring can’t maintain contact pressure → leaks.</li>
+            <li>Fix is usually: temperature verification + spike control + correct compound rating.</li>
+          </ul>
+        </div>
+        <div class="note" style="margin:0;">
+          <b>Fast diagnostic input</b><br/>
+          Photo of cracks + measured temperature near the seal.
+          <div style="margin-top:10px;">
+            <a class="btn" href="../index.html#quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Crack pattern cards (what you see)</h2>
+      <div class="patterns" aria-label="Crack pattern cards">
+        <div class="pcard">
+          <span class="tag">Fine cracks</span>
+          <b>Hairline cracking on surface</b>
+          <p>Classic heat aging sign. Elasticity drops; sealing pressure fades.</p>
+        </div>
+        <div class="pcard">
+          <span class="tag">Brittle feel</span>
+          <b>Hard like plastic</b>
+          <p>Ring feels stiff and “dry”. Often fails soon after reassembly.</p>
+        </div>
+        <div class="pcard">
+          <span class="tag">Edge cracking</span>
+          <b>Cracks at high-stress zones</b>
+          <p>Often appears where the ring is squeezed most or near hot spots.</p>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Heat load checklist (what to check first)</h2>
+      <div class="heat">
+        <ul>
+          <li><b>Measured temperature near seal</b> (surface + medium)</li>
+          <li><b>Temperature spikes</b> during start/stop, fast cycling, or overload</li>
+          <li>Seal location near <b>exhaust/manifold</b>, hot motor, or poor airflow</li>
+          <li><b>Hot fluid return</b> or bypass heating the gland area</li>
+          <li>Cooling issues: blocked heat exchanger, low flow, wrong fan direction</li>
+          <li>Long continuous runtime at the upper temperature limit</li>
+        </ul>
+      </div>
+
+      <div class="note" style="margin-top:12px;">
+        <b>Simple rule:</b> If the ring is brittle, treat it like a temperature problem first.
+        “Same size, new ring” will fail again if the peak heat remains.
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>9-minute troubleshooting checklist (practical order)</h2>
+      <div class="steps" aria-label="9-minute checklist">
+        <div class="step">
+          <div class="dot">1</div>
+          <div>
+            <b>Confirm brittle + cracking</b>
+            <p>Hard feel + fine cracks strongly suggests heat aging.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">2</div>
+          <div>
+            <b>Match leak behavior</b>
+            <p>Leaks often worsen when hot and may seep after shutdown because contact pressure is lost.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">3</div>
+          <div>
+            <b>Verify real temperature (not nameplate)</b>
+            <p>Measure near the seal. If you can, log peak temperature during the cycle.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">4</div>
+          <div>
+            <b>Check for spikes and local hot spots</b>
+            <p>Short spikes can destroy seals even if average temperature seems “OK”.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">5</div>
+          <div>
+            <b>Check sealing design stress</b>
+            <p>Excessive squeeze increases heat generation and accelerates aging. If available, verify squeeze target.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="dot">6</div>
+          <div>
+            <b>Apply first fix</b>
+            <p>Reduce peak heat exposure and choose a compound rated for real temperature + medium. Document changes to prevent repeats.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>Copy/paste failure record (send to supplier / internal)</h2>
+      <div class="record">
+        <b>Heat cracking failure record</b>
+        <div class="small">
+          Application: ________ (static/dynamic) &nbsp;&nbsp; Medium: ________<br/>
+          Seal location: ________ &nbsp;&nbsp; Runtime pattern: ________<br/>
+          Measured temperature near seal (avg/peak): ________ / ________ °C<br/>
+          Leak behavior (when): ________ (hot-only / slow seep / shutdown drip)<br/>
+          What the seal looks like: ________ (brittle, fine cracks, edge cracks)<br/>
+          Any known spikes/overload events: ________<br/>
+          Photos attached: (seal + gland area) ✅
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Why do cracks appear only on one side?</summary>
+          <p>
+            Often there is a local hot spot or uneven squeeze. Check nearby heat sources and alignment.
+          </p>
+        </details>
+        <details>
+          <summary>Is “hardness increase” normal over time?</summary>
+          <p>
+            Some hardening happens with aging, but rapid brittleness and cracking usually indicates excessive heat exposure or spikes.
+          </p>
+        </details>
+        <details>
+          <summary>What should I send for a fast recommendation?</summary>
+          <p>
+            Measured temperature (avg/peak), medium type, and a close-up photo of the cracking pattern.
+          </p>
+        </details>
+      </div>
+
+      <p class="footer">© 2026 Backup Parts. Minimal, AI-friendly guide to heat hardening and cracking failures.</p>
+    </article>
+
+  </div>
+</body>
+</html>
